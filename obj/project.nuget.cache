@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "al46d7ibVHdY9PddYQVgteeK1xf1bSzxYjCL6GgerYyeJhXe6C/XX3st5C5hYCnilnxq2+h9vm4Tq0Imiz2JEA==",
+  "success": true,
+  "projectFilePath": "/home/ark/RiderProjects/iac/iac.csproj",
+  "expectedPackageFiles": [
+    "/home/ark/.nuget/packages/microsoft.netcore.app.runtime.win-x64/3.1.8/microsoft.netcore.app.runtime.win-x64.3.1.8.nupkg.sha512",
+    "/home/ark/.nuget/packages/microsoft.netcore.app.runtime.osx-x64/3.1.8/microsoft.netcore.app.runtime.osx-x64.3.1.8.nupkg.sha512",
+    "/home/ark/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/3.1.8/microsoft.netcore.app.runtime.linux-x64.3.1.8.nupkg.sha512",
+    "/home/ark/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.8/microsoft.aspnetcore.app.ref.3.1.8.nupkg.sha512",
+    "/home/ark/.nuget/packages/microsoft.aspnetcore.app.runtime.win-x64/3.1.8/microsoft.aspnetcore.app.runtime.win-x64.3.1.8.nupkg.sha512",
+    "/home/ark/.nuget/packages/microsoft.aspnetcore.app.runtime.osx-x64/3.1.8/microsoft.aspnetcore.app.runtime.osx-x64.3.1.8.nupkg.sha512",
+    "/home/ark/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/3.1.8/microsoft.aspnetcore.app.runtime.linux-x64.3.1.8.nupkg.sha512",
+    "/home/ark/.nuget/packages/microsoft.netcore.app.host.win-x64/3.1.8/microsoft.netcore.app.host.win-x64.3.1.8.nupkg.sha512",
+    "/home/ark/.nuget/packages/microsoft.netcore.app.host.osx-x64/3.1.8/microsoft.netcore.app.host.osx-x64.3.1.8.nupkg.sha512",
+    "/home/ark/.nuget/packages/microsoft.netcore.app.host.linux-x64/3.1.8/microsoft.netcore.app.host.linux-x64.3.1.8.nupkg.sha512"
+  ],
+  "logs": []
+}
