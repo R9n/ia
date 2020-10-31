@@ -72,7 +72,6 @@ namespace iac.models
             }
         }
         
-        
         public void setPossibleOperations(List<Operation> operations)
         {
             possibleOperations= operations;

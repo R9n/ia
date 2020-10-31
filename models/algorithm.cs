@@ -127,25 +127,22 @@ namespace iac.models
         
         public  bool isSolution(Node node,Node solution)
         {
-            int solutionMaxVolume = _desiredSolution.getPitchers()[0].getMaxVolume();
-            int solutionCurrentVolume = _desiredSolution.getPitchers()[0].getCurrentVolume();
-            if ( solutionMaxVolume != -1)
+            List<Pitcher> solutionPitchers = solution.getPitchers();
+            List<Pitcher> nodePitchers = node.getPitchers();
+            
+            for (int i = 0; i < solutionPitchers.Count; i++)
             {
-
-                if (node.getPitchers()[0].getCurrentVolume() == solutionCurrentVolume)
+                if (solutionPitchers[i].getMaxVolume() != -1)
                 {
-                    return true;
-                } 
+                    if (solutionPitchers[i].getCurrentVolume() == nodePitchers[i].getCurrentVolume())
+                    {
+                        return true;
+                    }
+                    
+                }
+                
             }
-            else
-            { 
-                solutionMaxVolume = _desiredSolution.getPitchers()[1].getMaxVolume();
-                solutionCurrentVolume = _desiredSolution.getPitchers()[1].getCurrentVolume();
-                if (node.getPitchers()[1].getCurrentVolume() == solutionCurrentVolume)
-                {
-                    return true;
-                } 
-            }
+            
 
             return false;
 

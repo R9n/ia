@@ -21,10 +21,10 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/rules/drain-out.cs" />
         <option value="$PROJECT_DIR$/rules/fill.cs" />
-        <option value="$PROJECT_DIR$/Program.cs" />
-        <option value="$PROJECT_DIR$/models/algorithm.cs" />
-        <option value="$PROJECT_DIR$/models/node.cs" />
         <option value="$PROJECT_DIR$/algorithms/backtracking.cs" />
+        <option value="$PROJECT_DIR$/models/node.cs" />
+        <option value="$PROJECT_DIR$/models/algorithm.cs" />
+        <option value="$PROJECT_DIR$/Program.cs" />
         <option value="$PROJECT_DIR$/rules/transfer.cs" />
       </list>
     </option>
@@ -69,7 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604004083414</updated>
       <workItem from="1604004090167" duration="15771000" />
-      <workItem from="1604096353498" duration="11732000" />
+      <workItem from="1604096353498" duration="13227000" />
     </task>
     <servers />
   </component>
@@ -82,22 +82,22 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1253" height="77" key="GridCell.Tab.0.bottom" timestamp="1604153118222">
+    <state width="1253" height="25" key="GridCell.Tab.0.bottom" timestamp="1604154485131">
       <screen x="63" y="27" width="1303" height="741" />
     </state>
-    <state width="1253" height="77" key="GridCell.Tab.0.bottom/63.27.1303.741@63.27.1303.741" timestamp="1604153118222" />
-    <state width="1253" height="77" key="GridCell.Tab.0.center" timestamp="1604153118222">
+    <state width="1253" height="25" key="GridCell.Tab.0.bottom/63.27.1303.741@63.27.1303.741" timestamp="1604154485131" />
+    <state width="1253" height="25" key="GridCell.Tab.0.center" timestamp="1604154485130">
       <screen x="63" y="27" width="1303" height="741" />
     </state>
-    <state width="1253" height="77" key="GridCell.Tab.0.center/63.27.1303.741@63.27.1303.741" timestamp="1604153118222" />
-    <state width="1253" height="77" key="GridCell.Tab.0.left" timestamp="1604153118221">
+    <state width="1253" height="25" key="GridCell.Tab.0.center/63.27.1303.741@63.27.1303.741" timestamp="1604154485130" />
+    <state width="1253" height="25" key="GridCell.Tab.0.left" timestamp="1604154485130">
       <screen x="63" y="27" width="1303" height="741" />
     </state>
-    <state width="1253" height="77" key="GridCell.Tab.0.left/63.27.1303.741@63.27.1303.741" timestamp="1604153118221" />
-    <state width="1253" height="77" key="GridCell.Tab.0.right" timestamp="1604153118222">
+    <state width="1253" height="25" key="GridCell.Tab.0.left/63.27.1303.741@63.27.1303.741" timestamp="1604154485130" />
+    <state width="1253" height="25" key="GridCell.Tab.0.right" timestamp="1604154485131">
       <screen x="63" y="27" width="1303" height="741" />
     </state>
-    <state width="1253" height="77" key="GridCell.Tab.0.right/63.27.1303.741@63.27.1303.741" timestamp="1604153118222" />
+    <state width="1253" height="25" key="GridCell.Tab.0.right/63.27.1303.741@63.27.1303.741" timestamp="1604154485131" />
     <state x="196" y="32" width="1037" height="731" key="SettingsEditor" timestamp="1604147845579">
       <screen x="63" y="27" width="1303" height="741" />
     </state>

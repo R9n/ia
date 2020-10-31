@@ -38,22 +38,21 @@ namespace iac.rules
             }
 
             destiny.setCurrentVolume(destiny.getCurrentVolume() + ammount);
-            destiny.setIsFull(destiny.getMaxVolume() == destiny.getCurrentVolume());
-            
-            origin.setIsFull(origin.getMaxVolume() == origin.getCurrentVolume());
             origin.setCurrentVolume(origin.getCurrentVolume() - ammount);
+
+            destiny.setIsFull(destiny.getMaxVolume() == destiny.getCurrentVolume());
+            origin.setIsFull(origin.getMaxVolume() == origin.getCurrentVolume());
 
             List<Pitcher> newPitchers = new List<Pitcher>();
             List_operators.copyFromToMaintainingState(node.getPitchers(), newPitchers);
             newNode.setPitchers(newPitchers);
             newNode.replacePitcherById(operation.getOrigin(), origin);
             newNode.replacePitcherById(operation.getDestiny(), destiny);
-
+            newNode.setFather(node);
 
             description =
                 $"Transferir {ammount} do jarro {origin.getName()} para o para o jarro {destiny.getName()}";
-
-            newNode.setFather(node);
+            
             newNode.setOperation(description);
             return newNode;
         }

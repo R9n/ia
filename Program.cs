@@ -13,9 +13,10 @@ namespace iac
             Node solution = new Node();
             Pitcher pitcherC = new Pitcher();
             Pitcher pitcherD = new Pitcher();
+            Pitcher pitcherE = new Pitcher();
             List<Pitcher> solutionPitchers = new List<Pitcher>();
 
-            pitcherC.setMaxVolume(1);
+            pitcherC.setMaxVolume(-1);
             pitcherC.setCurrentVolume(2);
             pitcherC.setName("A");
 
@@ -23,9 +24,14 @@ namespace iac
             pitcherD.setCurrentVolume(1);
             pitcherD.setName("B");
             
+            pitcherE.setMaxVolume(4);
+            pitcherE.setCurrentVolume(3);
+            pitcherE.setName("C");
+            
 
             solutionPitchers.Add(pitcherC);
             solutionPitchers.Add(pitcherD);
+            solutionPitchers.Add(pitcherE);
         
             
             solution.setPitchers(solutionPitchers);
@@ -35,6 +41,7 @@ namespace iac
             Node initialState = new Node();
             Pitcher pitcherA = new Pitcher();
             Pitcher pitcherB = new Pitcher();
+            Pitcher pitcherF = new Pitcher();
             
             pitcherB.setCurrentVolume(0);
             pitcherB.setMaxVolume(3);
@@ -44,11 +51,16 @@ namespace iac
             pitcherA.setMaxVolume(4);
             pitcherA.setCurrentVolume(0);
             
+            pitcherF.setName("C");
+            pitcherF.setMaxVolume(5);
+            pitcherF.setCurrentVolume(0);
+            
             
             List<Pitcher> pitchers = new List<Pitcher>();
             
             pitchers.Add(pitcherA);
             pitchers.Add(pitcherB);
+            pitchers.Add(pitcherF);
          
             
             initialState.setPitchers(pitchers);
