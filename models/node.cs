@@ -31,6 +31,7 @@ namespace iac.models
         public bool isEqualTo(Node node)
         {
             bool isEqual = true;
+          
             List<Pitcher> node1Pitchers = node.getPitchers();
             
             for (int i = 0; i < node1Pitchers.Count; i++)

@@ -18,7 +18,7 @@ namespace iac.rules
             
             foreach (Pitcher pitcher in node.getPitchers())
             {
-                if (pitcher.getCurrentVolume() != 0)
+                if (pitcher.getCurrentVolume() > 0)
                 {
                     Operation operation = new Operation(ruleTypes.RulesTypes.drainOut,
                         pitcher.getId(),pitcher.getId()

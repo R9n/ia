@@ -38,11 +38,11 @@ namespace iac.algorithms
         Operation operation;
        public void findSolution()
        {
+          
            _currentNode = getInitialState();
            generatedStates.Add(_currentNode);
            _currentNode.setPossibleOperations(generateOperationSet(_currentNode));
            _currentNode.setHasConfigured(true);
-
            while (success == false && fail == false)
             {
                 
@@ -63,11 +63,10 @@ namespace iac.algorithms
                      if (hasBeenAlreadyGenerated(_currentNode) == false)
                      { 
                          generatedStates.Add(_currentNode);
-                         if (isSolution(_currentNode))
+                         if (isSolution(_currentNode,getSolution()))
                              
-                         {
+                         {  _currentNode.printState();
                              Console.WriteLine("Testando");
-                            _currentNode.printState();
                              successs = true;
                              generateSolutionList(_currentNode);
                              break;

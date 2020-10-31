@@ -125,7 +125,7 @@ namespace iac.models
         }
 
         
-        public  bool isSolution(Node node)
+        public  bool isSolution(Node node,Node solution)
         {
             int solutionMaxVolume = _desiredSolution.getPitchers()[0].getMaxVolume();
             int solutionCurrentVolume = _desiredSolution.getPitchers()[0].getCurrentVolume();
