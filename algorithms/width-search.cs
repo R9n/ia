@@ -4,10 +4,10 @@ using iac.models;
 
 namespace iac.algorithms
 {
-    public class DepthSearch:Algorithm
+    public class WidthSearch:Algorithm
     {
         
-        public DepthSearch(Node state, Node solution)
+        public WidthSearch(Node state, Node solution)
         {
             setIsInitialState(state);
             setDesiredSolution(solution);
@@ -15,7 +15,7 @@ namespace iac.algorithms
         private Node _currentNode;
         
         private  List<Node> closedNodes = new List<Node>();
-        Stack<Node> openNodes= new Stack<Node>();
+        Queue<Node> openNodes= new Queue<Node>();
         private Operation operation;
         private First_applicable _firstApplicable = new First_applicable();
         private Rule ruleToApply;
@@ -24,19 +24,21 @@ namespace iac.algorithms
         public void findSolution()
         {
             _currentNode = getInitialState();
-            openNodes.Push(_currentNode);
+            openNodes.Enqueue(_currentNode);
             while (true)
             {
                 if (openNodes.Count == 0)
                 {
+                    _currentNode.printState();
                     break;
                 }
                 else
                 {
-                    _currentNode = openNodes.Pop();
+                    _currentNode = openNodes.Dequeue();
                     if (isSolution(_currentNode, getDesiredSolution()))
                     {
                         generateSolutionList(_currentNode);
+                        
                        break;
                     }
                     else
@@ -52,7 +54,7 @@ namespace iac.algorithms
                                 if (hasBeenAlreadyGenerated(aux) == false)
                                 {
                                     generatedStates.Add(aux);
-                                    openNodes.Push(aux);
+                                    openNodes.Enqueue(aux);
                                 }
                         }
                         closedNodes.Add(_currentNode);
@@ -61,8 +63,6 @@ namespace iac.algorithms
             }  
             
         }
-
-
-
+        
     }
 }
