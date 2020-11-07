@@ -6,7 +6,6 @@ namespace iac.algorithms
 {
     public class WidthSearch:Algorithm
     {
-        
         public WidthSearch(Node state, Node solution)
         {
             setIsInitialState(state);
@@ -48,14 +47,19 @@ namespace iac.algorithms
                         
                         foreach (Operation possibleOperation in _currentNode.getPossibleOperations())
                         {
-                            
-                                ruleToApply = generateRule(possibleOperation);
-                                Node aux = ruleToApply.applyRule(_currentNode,possibleOperation);
+                            operation = _firstApplicable.getNextOperation(_currentNode.getPossibleOperations());
+                            if (operation != null)
+                            {
+                                
+                                operation.setHasTried(true);
+                                ruleToApply = generateRule(operation);
+                                Node aux = ruleToApply.applyRule(_currentNode,operation);
                                 if (hasBeenAlreadyGenerated(aux) == false)
                                 {
                                     generatedStates.Add(aux);
                                     openNodes.Enqueue(aux);
                                 }
+                            }
                         }
                         closedNodes.Add(_currentNode);
                     }

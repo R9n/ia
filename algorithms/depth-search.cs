@@ -19,7 +19,8 @@ namespace iac.algorithms
         private Operation operation;
         private First_applicable _firstApplicable = new First_applicable();
         private Rule ruleToApply;
-
+        private int _maxSearchDeep = 100;
+        private int auxDeepVerify =0;
 
         public void findSolution()
         {
@@ -46,14 +47,18 @@ namespace iac.algorithms
                         
                         foreach (Operation possibleOperation in _currentNode.getPossibleOperations())
                         {
-                            
-                                ruleToApply = generateRule(possibleOperation);
-                                Node aux = ruleToApply.applyRule(_currentNode,possibleOperation);
-                                if (hasBeenAlreadyGenerated(aux) == false)
+                            operation = _firstApplicable.getNextOperation(_currentNode.getPossibleOperations());
+                            if (operation != null)
+                            {
+                                operation.setHasTried(true); 
+                                ruleToApply = generateRule(operation);
+                                Node aux = ruleToApply.applyRule(_currentNode,operation);
+                                if (hasBeenAlreadyGenerated(aux)==false)
                                 {
                                     generatedStates.Add(aux);
                                     openNodes.Push(aux);
                                 }
+                            }
                         }
                         closedNodes.Add(_currentNode);
                     }

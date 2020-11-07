@@ -79,9 +79,9 @@ namespace iac
             WidthSearch widthSearch = new WidthSearch(initialState, solution);
             widthSearch.initalizeAlgorithmRules();
             
-            widthSearch.findSolution();
+            depthSearch.findSolution();
 
-            foreach (Node node in widthSearch.getSolutionFound())
+            foreach (Node node in depthSearch.getSolutionFound())
             {
                 Console.WriteLine(node.getOperation());
             }
