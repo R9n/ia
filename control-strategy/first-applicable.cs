@@ -9,7 +9,7 @@ namespace iac
         public Operation getNextOperation(List<Operation> operations)
         {
             foreach (Operation operation in operations)
-            {
+            {   
                 if (operation.getHasTried()==false)
                 {
                     return operation;

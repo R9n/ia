@@ -16,7 +16,7 @@ namespace iac
             Pitcher pitcherE = new Pitcher();
             List<Pitcher> solutionPitchers = new List<Pitcher>();
 
-            pitcherC.setMaxVolume(-1);
+            pitcherC.setMaxVolume(2);
             pitcherC.setCurrentVolume(2);
             pitcherC.setName("A");
 
@@ -24,7 +24,7 @@ namespace iac
             pitcherD.setCurrentVolume(1);
             pitcherD.setName("B");
             
-            pitcherE.setMaxVolume(4);
+            pitcherE.setMaxVolume(-1);
             pitcherE.setCurrentVolume(3);
             pitcherE.setName("C");
             
@@ -73,9 +73,12 @@ namespace iac
             Backtracking backtracking = new Backtracking(initialState, solution);
             backtracking.initalizeAlgorithmRules();
             
-            backtracking.findSolution();
+            DepthSearch depthSearch = new DepthSearch(initialState, solution);
+            depthSearch.initalizeAlgorithmRules();
+            
+            depthSearch.findSolution();
 
-            foreach (Node node in backtracking.getSolutionFound())
+            foreach (Node node in depthSearch.getSolutionFound())
             {
                 Console.WriteLine(node.getOperation());
             }

@@ -124,6 +124,21 @@ namespace iac.models
             return _isInitialState;
         }
 
+        public  void generateSolutionList(Node node)
+        {
+            Node aux = new Node();
+            aux = node;
+            List<Node> solution = new List<Node>();
+            while (aux.getIsInitialState() == false)
+            {
+                Node aux2 = new Node();
+                aux2 = aux;
+                solution.Add(aux2);
+                aux = aux.getFather();
+            }
+            setSolution(solution);
+        }
+        
         
         public  bool isSolution(Node node,Node solution)
         {
