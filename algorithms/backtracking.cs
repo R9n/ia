@@ -10,20 +10,28 @@ namespace iac.algorithms
         {
             setIsInitialState(state);
             setDesiredSolution(solution);
+            
+            
         }
 
         private Node _currentNode = new Node();
         
         private First_applicable _firstApplicable = new First_applicable();
+        
+        
 
         Operation operation;
 
         public void findSolution()
-        {
+        {   
+            statistics._totalExpandedNodes += 1;
+            statistics._totalVisitedNodes += 1;
+            statistics.setStartTime(DateTime.Now.Millisecond);
             _currentNode = getInitialState();
             generatedStates.Add(_currentNode);
             _currentNode.setPossibleOperations(generateOperationSet(_currentNode));
             _currentNode.setHasConfigured(true);
+           
             while (true)
             {
                 if (_currentNode.getHasConfigured() == false)
@@ -35,11 +43,13 @@ namespace iac.algorithms
                 operation
                     = _firstApplicable.getNextOperation(_currentNode.getPossibleOperations());
                 if (operation != null)
-                {
+                { 
                     operation.setHasTried(true);
                     Rule rule = generateRule(operation);
                     
                     _currentNode = rule.applyRule(_currentNode, operation);
+                    statistics._totalExpandedNodes += 1;
+                    statistics._totalVisitedNodes += 1;
                     _currentNode.setPossibleOperations(generateOperationSet(_currentNode));
                     if (hasBeenAlreadyGenerated(_currentNode) == false)
                     {
@@ -47,8 +57,9 @@ namespace iac.algorithms
                         if (isSolution(_currentNode, getSolution()))
 
                         {
-                            _currentNode.printState();
                             generateSolutionList(_currentNode);
+                            statistics.setEndTime(DateTime.Now.Millisecond);
+                            statistics.setSolution(getSolutionFound());
                             break;
                         }
                     }
@@ -62,6 +73,7 @@ namespace iac.algorithms
                 {
                     if (_currentNode.getIsInitialState())
                     {
+                        statistics.setEndTime(DateTime.Now.Millisecond);
                         break;
                     }
                     else

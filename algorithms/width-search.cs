@@ -22,23 +22,29 @@ namespace iac.algorithms
 
         public void findSolution()
         {
+            statistics._totalExpandedNodes += 1;
+            statistics._totalVisitedNodes += 1;
+            statistics.setStartTime(DateTime.Now.Millisecond);
             _currentNode = getInitialState();
             openNodes.Enqueue(_currentNode);
             while (true)
             {
                 if (openNodes.Count == 0)
                 {
-                    _currentNode.printState();
+                    statistics.setEndTime(DateTime.Now.Millisecond);
                     break;
                 }
                 else
                 {
                     _currentNode = openNodes.Dequeue();
+                    statistics._totalVisitedNodes += 1;
+
                     if (isSolution(_currentNode, getDesiredSolution()))
                     {
                         generateSolutionList(_currentNode);
-                        
-                       break;
+                        statistics.setEndTime(DateTime.Now.Millisecond);
+                        statistics.setSolution(getSolutionFound());
+                        break;
                     }
                     else
                     {
@@ -54,6 +60,8 @@ namespace iac.algorithms
                                 operation.setHasTried(true);
                                 ruleToApply = generateRule(operation);
                                 Node aux = ruleToApply.applyRule(_currentNode,operation);
+                                statistics._totalExpandedNodes += 1;
+
                                 if (hasBeenAlreadyGenerated(aux) == false)
                                 {
                                     generatedStates.Add(aux);

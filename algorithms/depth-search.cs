@@ -24,20 +24,29 @@ namespace iac.algorithms
 
         public void findSolution()
         {
+            statistics._totalExpandedNodes += 1;
+            statistics._totalVisitedNodes += 1;
+            statistics.setStartTime(DateTime.Now.Millisecond);
             _currentNode = getInitialState();
             openNodes.Push(_currentNode);
             while (true)
             {
                 if (openNodes.Count == 0)
                 {
+                    statistics.setEndTime(DateTime.Now.Millisecond);
                     break;
                 }
                 else
                 {
                     _currentNode = openNodes.Pop();
+                    statistics._totalVisitedNodes += 1;
+                    statistics._totalExpandedNodes += 1;
+
                     if (isSolution(_currentNode, getDesiredSolution()))
                     {
                         generateSolutionList(_currentNode);
+                        statistics.setEndTime(DateTime.Now.Millisecond);
+                        statistics.setSolution(getSolutionFound());
                        break;
                     }
                     else

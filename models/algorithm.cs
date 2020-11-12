@@ -8,12 +8,11 @@ namespace iac.models
     public class Algorithm
     {
         List<Node> _solutionFound = new List<Node>();
-        Statistics statistics = new Statistics();
+        public Statistics statistics = new Statistics();
         Node _isInitialState;
         Node _desiredSolution;
+        
         List<Rule> rules = new List<Rule>();
-        public  bool successs=false;
-        public  bool fail=false;
         public List<Node> generatedStates= new List<Node>();
         public void initalizeAlgorithmRules()
         {
