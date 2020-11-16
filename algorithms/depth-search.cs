@@ -9,7 +9,7 @@ namespace iac.algorithms
         
         public DepthSearch(Node state, Node solution)
         {
-            setIsInitialState(state);
+            setInitialState(state);
             setDesiredSolution(solution);
         }
         private Node _currentNode;
@@ -23,11 +23,13 @@ namespace iac.algorithms
         private int auxDeepVerify =0;
 
         public void findSolution()
-        {
+        {           
+            generatedStates.Clear();
+            _currentNode = getInitialState();
             statistics._totalExpandedNodes += 1;
             statistics._totalVisitedNodes += 1;
+            _currentNode.setIsInitialState(true);
             statistics.setStartTime(DateTime.Now.Millisecond);
-            _currentNode = getInitialState();
             openNodes.Push(_currentNode);
             while (true)
             {
@@ -47,6 +49,7 @@ namespace iac.algorithms
                         generateSolutionList(_currentNode);
                         statistics.setEndTime(DateTime.Now.Millisecond);
                         statistics.setSolution(getSolutionFound());
+                        statistics.setAverageBranchingFactor(calculateAverageBranchingFactor());
                        break;
                     }
                     else

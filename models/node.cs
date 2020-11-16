@@ -14,9 +14,27 @@ namespace iac.models
         private string _generatingOperation;
         private List<Operation> possibleOperations;
         private bool _hasConfigured = false;
+        private bool _isLeaf = false;
+        private int _id;
 
+        public Node()
+        {
+           _id = Global_variables.idsHandler.getNextId();
+        }
 
         
+        public int getId()
+        {
+            return _id; 
+        }
+        public void setIsLeaf(bool value)
+        {
+            _isLeaf= value;
+        }
+        public bool getIsLeaf()
+        {
+            return _isLeaf; 
+        }
         public void setHasConfigured(bool value)
         {
             _hasConfigured= value;
@@ -59,12 +77,14 @@ namespace iac.models
         }
         
         public void printState()
-        {
+        {       
+            Console.WriteLine("-------------------------------------------------");
+            Console.WriteLine("É folha ?: "+ getIsLeaf());
             for (int i = 0; i < _pitchers.Count; i++)
             {
                 Console.WriteLine("Jarro: "+_pitchers[i].getName() );
                 Console.WriteLine("Id: "+_pitchers[i].getId() );
-                Console.WriteLine("ISFull: "+_pitchers[i].getIsFull() );
+                Console.WriteLine("IsFull: "+_pitchers[i].getIsFull() );
                 Console.WriteLine("Volume Atual: "+_pitchers[i].getCurrentVolume());
                 Console.WriteLine("Volume Maximo: "+_pitchers[i].getMaxVolume());
                 Console.WriteLine("-------------------------------------------------");

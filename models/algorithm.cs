@@ -9,9 +9,9 @@ namespace iac.models
     {
         List<Node> _solutionFound = new List<Node>();
         public Statistics statistics = new Statistics();
-        Node _isInitialState;
+        Node _InitialState;
         Node _desiredSolution;
-        
+        public List<Node> leafs= new List<Node>();
         List<Rule> rules = new List<Rule>();
         public List<Node> generatedStates= new List<Node>();
         public void initalizeAlgorithmRules()
@@ -113,14 +113,14 @@ namespace iac.models
             return _desiredSolution;
         }
 
-        public void setIsInitialState(Node value)
+        public void setInitialState(Node value)
         {
-            _isInitialState = value;
+            _InitialState = value;
         }
 
         public Node getInitialState()
         {
-            return _isInitialState;
+            return _InitialState;
         }
 
         public  void generateSolutionList(Node node)
@@ -137,7 +137,34 @@ namespace iac.models
             }
             setSolution(solution);
         }
-        
+
+       public double calculateAverageBranchingFactor()
+        {
+            Node aux ;
+            int treeHeigth = 0;
+            if (_solutionFound.Count > 0)
+            {
+                aux = _solutionFound.First();
+                foreach (Node node in leafs)
+                {
+                    if (node.getId() > aux.getId())
+                    {
+                        aux = node;
+                    }
+                }
+
+                while (aux.getIsInitialState() == false)
+                {
+                    treeHeigth++;
+                    aux = aux.getFather();
+                }
+                return treeHeigth/((generatedStates.Count+ 0.0) - (leafs.Count+0.0));
+
+            }
+
+            return 0;
+
+        }
         
         public  bool isSolution(Node node,Node solution)
         {

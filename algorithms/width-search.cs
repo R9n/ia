@@ -8,7 +8,7 @@ namespace iac.algorithms
     {
         public WidthSearch(Node state, Node solution)
         {
-            setIsInitialState(state);
+            setInitialState(state);
             setDesiredSolution(solution);
         }
         private Node _currentNode;
@@ -22,10 +22,12 @@ namespace iac.algorithms
 
         public void findSolution()
         {
+            generatedStates.Clear();
             statistics._totalExpandedNodes += 1;
             statistics._totalVisitedNodes += 1;
             statistics.setStartTime(DateTime.Now.Millisecond);
             _currentNode = getInitialState();
+            generatedStates.Add(_currentNode);
             openNodes.Enqueue(_currentNode);
             while (true)
             {
@@ -44,6 +46,7 @@ namespace iac.algorithms
                         generateSolutionList(_currentNode);
                         statistics.setEndTime(DateTime.Now.Millisecond);
                         statistics.setSolution(getSolutionFound());
+                        statistics.setAverageBranchingFactor(calculateAverageBranchingFactor());
                         break;
                     }
                     else
@@ -61,7 +64,7 @@ namespace iac.algorithms
                                 ruleToApply = generateRule(operation);
                                 Node aux = ruleToApply.applyRule(_currentNode,operation);
                                 statistics._totalExpandedNodes += 1;
-
+                                
                                 if (hasBeenAlreadyGenerated(aux) == false)
                                 {
                                     generatedStates.Add(aux);

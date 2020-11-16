@@ -5,11 +5,12 @@ namespace iac.models
 {
     public class Statistics
     {
-        private double _startTime;
-        private double _endTime;
+        private double _startTime=0.0;
+        private double _endTime=0.0;
         private List<Node> _solution=new List<Node>();
         public int _totalExpandedNodes=0;
         public int _totalVisitedNodes=0;
+        private double _averageBranchingFactor=0;
 
 
         public void printStatistcs()
@@ -17,6 +18,7 @@ namespace iac.models
             Console.WriteLine("===============================================");
             Console.WriteLine("Total de nós expandidos: "+_totalExpandedNodes);
             Console.WriteLine("Total de nós visitados: "+_totalVisitedNodes);
+            Console.WriteLine("Fator médio de ramificação "+_averageBranchingFactor);
             Console.WriteLine("Tempo total de execução: "+getExecutionTime()+"Milissegundos");
             Console.WriteLine("Profundidade da solução: "+getSolutionDeep());
             Console.WriteLine("Caminho da solução:");
@@ -67,6 +69,16 @@ namespace iac.models
                 path.Add(_solution[i].getOperation());
             }
             return path;
+        }
+
+        public void setAverageBranchingFactor(double value)
+        {
+            _averageBranchingFactor = value;
+        }
+
+        public double getAvarageBranchingFactor()
+        {
+            return _averageBranchingFactor;
         }
 
     }

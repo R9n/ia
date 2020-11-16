@@ -31,6 +31,7 @@
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/algorithm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/models/algorithm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/models/node.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/statistics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/models/statistics.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.pdb" afterDir="false" />
@@ -53,16 +54,16 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/rules/drain-out.cs" />
         <option value="$PROJECT_DIR$/rules/fill.cs" />
-        <option value="$PROJECT_DIR$/models/node.cs" />
         <option value="$PROJECT_DIR$/rules/transfer.cs" />
         <option value="$PROJECT_DIR$/control-strategy/first-applicable.cs" />
         <option value="$PROJECT_DIR$/models/rule.cs" />
-        <option value="$PROJECT_DIR$/models/algorithm.cs" />
+        <option value="$PROJECT_DIR$/models/node.cs" />
         <option value="$PROJECT_DIR$/algorithms/backtracking.cs" />
         <option value="$PROJECT_DIR$/algorithms/width-search.cs" />
-        <option value="$PROJECT_DIR$/algorithms/depth-search.cs" />
         <option value="$PROJECT_DIR$/models/statistics.cs" />
         <option value="$PROJECT_DIR$/Program.cs" />
+        <option value="$PROJECT_DIR$/models/algorithm.cs" />
+        <option value="$PROJECT_DIR$/algorithms/depth-search.cs" />
       </list>
     </option>
   </component>
@@ -112,7 +113,8 @@
       <workItem from="1604772249817" duration="10868000" />
       <workItem from="1605062847403" duration="3309000" />
       <workItem from="1605204954727" duration="2024000" />
-      <workItem from="1605210723687" duration="2421000" />
+      <workItem from="1605210723687" duration="3148000" />
+      <workItem from="1605444572004" duration="11742000" />
     </task>
     <servers />
   </component>
@@ -137,34 +139,34 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1253" height="163" key="GridCell.Tab.0.bottom" timestamp="1605212755911">
+    <state width="1253" height="123" key="GridCell.Tab.0.bottom" timestamp="1605536341705">
       <screen x="63" y="28" width="1303" height="740" />
     </state>
     <state width="1253" height="91" key="GridCell.Tab.0.bottom/63.27.1303.741@63.27.1303.741" timestamp="1604924553543" />
-    <state width="1253" height="163" key="GridCell.Tab.0.bottom/63.28.1303.740@63.28.1303.740" timestamp="1605212755911" />
-    <state width="1253" height="163" key="GridCell.Tab.0.center" timestamp="1605212755911">
+    <state width="1253" height="123" key="GridCell.Tab.0.bottom/63.28.1303.740@63.28.1303.740" timestamp="1605536341705" />
+    <state width="1253" height="123" key="GridCell.Tab.0.center" timestamp="1605536341704">
       <screen x="63" y="28" width="1303" height="740" />
     </state>
     <state width="1253" height="91" key="GridCell.Tab.0.center/63.27.1303.741@63.27.1303.741" timestamp="1604924553542" />
-    <state width="1253" height="163" key="GridCell.Tab.0.center/63.28.1303.740@63.28.1303.740" timestamp="1605212755911" />
-    <state width="1253" height="163" key="GridCell.Tab.0.left" timestamp="1605212755910">
+    <state width="1253" height="123" key="GridCell.Tab.0.center/63.28.1303.740@63.28.1303.740" timestamp="1605536341704" />
+    <state width="1253" height="123" key="GridCell.Tab.0.left" timestamp="1605536341704">
       <screen x="63" y="28" width="1303" height="740" />
     </state>
     <state width="1253" height="91" key="GridCell.Tab.0.left/63.27.1303.741@63.27.1303.741" timestamp="1604924553542" />
-    <state width="1253" height="163" key="GridCell.Tab.0.left/63.28.1303.740@63.28.1303.740" timestamp="1605212755910" />
-    <state width="1253" height="163" key="GridCell.Tab.0.right" timestamp="1605212755911">
+    <state width="1253" height="123" key="GridCell.Tab.0.left/63.28.1303.740@63.28.1303.740" timestamp="1605536341704" />
+    <state width="1253" height="123" key="GridCell.Tab.0.right" timestamp="1605536341705">
       <screen x="63" y="28" width="1303" height="740" />
     </state>
     <state width="1253" height="91" key="GridCell.Tab.0.right/63.27.1303.741@63.27.1303.741" timestamp="1604924553543" />
-    <state width="1253" height="163" key="GridCell.Tab.0.right/63.28.1303.740@63.28.1303.740" timestamp="1605212755911" />
+    <state width="1253" height="123" key="GridCell.Tab.0.right/63.28.1303.740@63.28.1303.740" timestamp="1605536341705" />
     <state x="196" y="32" width="1037" height="731" key="SettingsEditor" timestamp="1604147845579">
       <screen x="63" y="27" width="1303" height="741" />
     </state>
     <state x="196" y="32" width="1037" height="731" key="SettingsEditor/63.27.1303.741@63.27.1303.741" timestamp="1604147845579" />
-    <state x="183" y="228" width="1103" height="540" key="VCS.FileHistoryDialog" timestamp="1605206113034">
+    <state x="183" y="228" width="1103" height="540" key="VCS.FileHistoryDialog" timestamp="1605475419419">
       <screen x="63" y="28" width="1303" height="740" />
     </state>
-    <state x="183" y="228" width="1103" height="540" key="VCS.FileHistoryDialog/63.28.1303.740@63.28.1303.740" timestamp="1605206113034" />
+    <state x="183" y="228" width="1103" height="540" key="VCS.FileHistoryDialog/63.28.1303.740@63.28.1303.740" timestamp="1605475419419" />
     <state x="63" y="27" width="770" height="741" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604779866491">
       <screen x="63" y="27" width="1303" height="741" />
     </state>
@@ -173,9 +175,10 @@
       <screen x="63" y="27" width="1303" height="741" />
     </state>
     <state x="376" y="100" width="676" height="668" key="find.popup/63.27.1303.741@63.27.1303.741" timestamp="1604780811299" />
-    <state x="377" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604021640889">
-      <screen x="63" y="27" width="1303" height="741" />
+    <state x="377" y="90" width="672" height="678" key="search.everywhere.popup" timestamp="1605475157559">
+      <screen x="63" y="28" width="1303" height="740" />
     </state>
     <state x="377" y="89" width="672" height="678" key="search.everywhere.popup/63.27.1303.741@63.27.1303.741" timestamp="1604021640889" />
+    <state x="377" y="90" width="672" height="678" key="search.everywhere.popup/63.28.1303.740@63.28.1303.740" timestamp="1605475157559" />
   </component>
 </project>

@@ -8,10 +8,8 @@ namespace iac.algorithms
     {
         public Backtracking(Node state, Node solution)
         {
-            setIsInitialState(state);
+            setInitialState(state);
             setDesiredSolution(solution);
-            
-            
         }
 
         private Node _currentNode = new Node();
@@ -24,6 +22,7 @@ namespace iac.algorithms
 
         public void findSolution()
         {   
+            generatedStates.Clear();
             statistics._totalExpandedNodes += 1;
             statistics._totalVisitedNodes += 1;
             statistics.setStartTime(DateTime.Now.Millisecond);
@@ -31,7 +30,6 @@ namespace iac.algorithms
             generatedStates.Add(_currentNode);
             _currentNode.setPossibleOperations(generateOperationSet(_currentNode));
             _currentNode.setHasConfigured(true);
-           
             while (true)
             {
                 if (_currentNode.getHasConfigured() == false)
@@ -39,7 +37,7 @@ namespace iac.algorithms
                     _currentNode.setPossibleOperations(generateOperationSet(_currentNode));
                     _currentNode.setHasConfigured(true);
                 }
-
+              
                 operation
                     = _firstApplicable.getNextOperation(_currentNode.getPossibleOperations());
                 if (operation != null)
@@ -59,18 +57,22 @@ namespace iac.algorithms
                         {
                             generateSolutionList(_currentNode);
                             statistics.setEndTime(DateTime.Now.Millisecond);
+                            _currentNode.setIsLeaf(true);
+                            leafs.Add(_currentNode);
                             statistics.setSolution(getSolutionFound());
+                            statistics.setAverageBranchingFactor(calculateAverageBranchingFactor());
                             break;
                         }
                     }
                     else
-                    {
+                    {   
                         _currentNode = _currentNode.getFather();
                     }
                 }
-
                 else
                 {
+                    _currentNode.setIsLeaf(true);
+                    leafs.Add(_currentNode);
                     if (_currentNode.getIsInitialState())
                     {
                         statistics.setEndTime(DateTime.Now.Millisecond);
