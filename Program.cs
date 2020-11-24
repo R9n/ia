@@ -82,9 +82,12 @@ namespace iac
             OrderedSearch orderedSearch = new OrderedSearch(initialState, solution);
             orderedSearch.initalizeAlgorithmRules();
             
-            orderedSearch.findSolution();
-
-            orderedSearch.statistics.printStatistcs();
+            GreedySearch greedySearch = new GreedySearch(initialState, solution);
+            greedySearch.initalizeAlgorithmRules();
+            
+            greedySearch.findSolution();
+            
+            greedySearch.statistics.printStatistcs();
         }
     }
 }

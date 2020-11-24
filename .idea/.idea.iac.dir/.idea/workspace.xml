@@ -19,18 +19,37 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/develop" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4e1999d-f266-4423-a01a-806600076bfb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/algorithms/ordered-search.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithms/greedy-search.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/quick-sort-for-nodes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/heuristics/closest-to-solution.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.iac.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iac.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.iac.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iac.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.runtimeconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/control-strategy/first-applicable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/control-strategy/first-applicable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/algorithm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/models/algorithm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/rule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/models/rule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules/drain-out.cs" beforeDir="false" afterPath="$PROJECT_DIR$/rules/drain-out.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rules/fill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/rules/fill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/list-operators.cs" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/list-operators.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iac.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/iac.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/models/node.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +60,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/87DBB896-6B20-4A14-9B6A-7AB43642646D/9c/8476256b/Comparer`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/87DBB896-6B20-4A14-9B6A-7AB43642646D/07/34b6d6b1/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/87DBB896-6B20-4A14-9B6A-7AB43642646D/d7/eb72f140/List`1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -49,28 +70,38 @@
         <option value="$PROJECT_DIR$/models/pitcher.cs" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/rules/transfer.cs" />
-        <option value="$PROJECT_DIR$/models/node.cs" />
         <option value="$PROJECT_DIR$/algorithms/backtracking.cs" />
         <option value="$PROJECT_DIR$/models/statistics.cs" />
-        <option value="$PROJECT_DIR$/Program.cs" />
         <option value="$PROJECT_DIR$/algorithms/depth-search.cs" />
         <option value="$PROJECT_DIR$/rules/fill.cs" />
         <option value="$PROJECT_DIR$/rules/drain-out.cs" />
         <option value="$PROJECT_DIR$/models/rule.cs" />
         <option value="$PROJECT_DIR$/models/algorithm.cs" />
-        <option value="$PROJECT_DIR$/control-strategy/first-applicable.cs" />
         <option value="$PROJECT_DIR$/algorithms/width-search.cs" />
         <option value="$PROJECT_DIR$/algorithms/ordered-search.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/87DBB896-6B20-4A14-9B6A-7AB43642646D/d7/eb72f140/List`1.cs" />
+        <option value="$PROJECT_DIR$/helpers/quick-sort.cs" />
+        <option value="$PROJECT_DIR$/helpers/list-operators.cs" />
+        <option value="$PROJECT_DIR$/helpers/quick-srot.cs" />
+        <option value="$PROJECT_DIR$/models/node.cs" />
+        <option value="$PROJECT_DIR$/heuristics/closest-to-solution.cs" />
+        <option value="$PROJECT_DIR$/control-strategy/first-applicable.cs" />
+        <option value="$PROJECT_DIR$/helpers/quick-sort-for-nodes.cs" />
+        <option value="$PROJECT_DIR$/Program.cs" />
+        <option value="$PROJECT_DIR$/algorithms/greedy-search.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1jZGDn6ejmBhfnmEPXttw9lJpih" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.CSharpInteractiveConfiguration" />
@@ -113,7 +144,8 @@
       <workItem from="1605210723687" duration="3148000" />
       <workItem from="1605444572004" duration="12259000" />
       <workItem from="1606165399527" duration="7739000" />
-      <workItem from="1606229265726" duration="2264000" />
+      <workItem from="1606229265726" duration="7557000" />
+      <workItem from="1606239545169" duration="9765000" />
     </task>
     <servers />
   </component>
@@ -127,7 +159,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/develop" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -135,29 +179,30 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1253" height="24" key="GridCell.Tab.0.bottom" timestamp="1605536913321">
+    <state width="1253" height="2" key="GridCell.Tab.0.bottom" timestamp="1606254368670">
       <screen x="63" y="28" width="1303" height="740" />
     </state>
     <state width="1253" height="91" key="GridCell.Tab.0.bottom/63.27.1303.741@63.27.1303.741" timestamp="1604924553543" />
-    <state width="1253" height="24" key="GridCell.Tab.0.bottom/63.28.1303.740@63.28.1303.740" timestamp="1605536913321" />
-    <state width="1253" height="24" key="GridCell.Tab.0.center" timestamp="1605536913320">
+    <state width="1253" height="2" key="GridCell.Tab.0.bottom/63.28.1303.740@63.28.1303.740" timestamp="1606254368670" />
+    <state width="1253" height="2" key="GridCell.Tab.0.center" timestamp="1606254368669">
       <screen x="63" y="28" width="1303" height="740" />
     </state>
     <state width="1253" height="91" key="GridCell.Tab.0.center/63.27.1303.741@63.27.1303.741" timestamp="1604924553542" />
-    <state width="1253" height="24" key="GridCell.Tab.0.center/63.28.1303.740@63.28.1303.740" timestamp="1605536913320" />
-    <state width="1253" height="24" key="GridCell.Tab.0.left" timestamp="1605536913320">
+    <state width="1253" height="2" key="GridCell.Tab.0.center/63.28.1303.740@63.28.1303.740" timestamp="1606254368669" />
+    <state width="1253" height="2" key="GridCell.Tab.0.left" timestamp="1606254368669">
       <screen x="63" y="28" width="1303" height="740" />
     </state>
     <state width="1253" height="91" key="GridCell.Tab.0.left/63.27.1303.741@63.27.1303.741" timestamp="1604924553542" />
-    <state width="1253" height="24" key="GridCell.Tab.0.left/63.28.1303.740@63.28.1303.740" timestamp="1605536913320" />
-    <state width="1253" height="24" key="GridCell.Tab.0.right" timestamp="1605536913321">
+    <state width="1253" height="2" key="GridCell.Tab.0.left/63.28.1303.740@63.28.1303.740" timestamp="1606254368669" />
+    <state width="1253" height="2" key="GridCell.Tab.0.right" timestamp="1606254368670">
       <screen x="63" y="28" width="1303" height="740" />
     </state>
     <state width="1253" height="91" key="GridCell.Tab.0.right/63.27.1303.741@63.27.1303.741" timestamp="1604924553543" />
-    <state width="1253" height="24" key="GridCell.Tab.0.right/63.28.1303.740@63.28.1303.740" timestamp="1605536913321" />
+    <state width="1253" height="2" key="GridCell.Tab.0.right/63.28.1303.740@63.28.1303.740" timestamp="1606254368670" />
     <state x="196" y="32" width="1037" height="731" key="SettingsEditor" timestamp="1604147845579">
       <screen x="63" y="27" width="1303" height="741" />
     </state>

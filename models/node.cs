@@ -16,12 +16,39 @@ namespace iac.models
         private bool _hasConfigured = false;
         private bool _isLeaf = false;
         private int _id;
+        private int heuristicValor = 0;
 
         public Node()
         {
            _id = Global_variables.idsHandler.getNextId();
         }
+        
+        public Node(Node node)
+        {
+            _father = node.getFather();
+            _isProcessed = node.getIsProcessed();
+            _isInitialState = node.getIsInitialState();
+            _generatedNodes = node.getGeneratedNodes();
+            _generatingOperation = node._generatingOperation;
+            possibleOperations = node.getPossibleOperations();
+            _hasConfigured = node.getHasConfigured();
+            _isLeaf = node.getIsLeaf();
+            heuristicValor = node.getHeuristicValor();
+            _pitchers = node.getPitchers();
+            _id = Global_variables.idsHandler.getNextId();
+        }
 
+        
+        public int getHeuristicValor()
+        {
+            return heuristicValor; 
+        }
+        public void setHeuristicValor(int value)
+        {
+            heuristicValor= value;
+        }
+        
+        
         
         public int getId()
         {

@@ -9,6 +9,7 @@
 
     <ItemGroup>
       <Compile Remove="enums\**" />
+      <Compile Remove="helpers\quick-sort.cs" />
     </ItemGroup>
 
     <ItemGroup>

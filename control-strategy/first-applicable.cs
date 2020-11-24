@@ -21,7 +21,7 @@ namespace iac
         
         public Operation getNextOperationWithWeight(List<Operation> operations)
         {
-            int weight = 0;
+            int weight = Int32.MaxValue;
             int aux = 0;
             Operation auxOperation = null;
             foreach (Operation operation in operations)
@@ -43,7 +43,7 @@ namespace iac
                             aux = 1;
                             break;
                     }
-                    if (aux > weight)
+                    if (aux < weight)
                     {
                         weight = aux;
                         auxOperation = operation;

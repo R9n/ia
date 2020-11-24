@@ -9,6 +9,7 @@
       <e p="algorithms" t="Include">
         <e p="backtracking.cs" t="Include" />
         <e p="depth-search.cs" t="Include" />
+        <e p="greedy-search.cs" t="Include" />
         <e p="ordered-search.cs" t="Include" />
         <e p="width-search.cs" t="Include" />
       </e>
@@ -20,6 +21,10 @@
       <e p="helpers" t="Include">
         <e p="ids-handler.cs" t="Include" />
         <e p="list-operators.cs" t="Include" />
+        <e p="quick-sort-for-nodes.cs" t="Include" />
+      </e>
+      <e p="heuristics" t="Include">
+        <e p="closest-to-solution.cs" t="Include" />
       </e>
       <e p="iac.csproj" t="IncludeRecursive" />
       <e p="models" t="Include">
