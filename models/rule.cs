@@ -6,7 +6,8 @@ namespace iac.models
     {
         public int pitcherToApplyId;
         private ruleTypes.RulesTypes _ruleTypes;
- 
+        public int weight = 1;
+        
         public void setRuleType(ruleTypes.RulesTypes  ruleType)
         {
             _ruleTypes = ruleType;

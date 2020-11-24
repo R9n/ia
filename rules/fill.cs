@@ -6,8 +6,8 @@ namespace iac.rules
 {
     public class Fill:Rule
     {
-
-       public Fill()
+       
+        public Fill()
         {
             setRuleType(ruleTypes.RulesTypes.fill);
         }

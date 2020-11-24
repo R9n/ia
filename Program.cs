@@ -79,9 +79,12 @@ namespace iac
             WidthSearch widthSearch = new WidthSearch(initialState, solution);
             widthSearch.initalizeAlgorithmRules();
             
-            depthSearch.findSolution();
+            OrderedSearch orderedSearch = new OrderedSearch(initialState, solution);
+            orderedSearch.initalizeAlgorithmRules();
+            
+            orderedSearch.findSolution();
 
-            depthSearch.statistics.printStatistcs();
+            orderedSearch.statistics.printStatistcs();
         }
     }
 }

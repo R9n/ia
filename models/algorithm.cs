@@ -55,7 +55,7 @@ namespace iac.models
             }
             return operations;
         }
-
+        
         public Rule generateRule(Operation operation)
         {
             switch (operation.getRuleType())
