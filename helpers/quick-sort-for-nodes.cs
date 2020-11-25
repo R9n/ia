@@ -33,9 +33,7 @@ namespace iac.helpers
                 while (nodes[left].getHeuristicValor() < pivot)
                 {
                     left++;
-                } 
-                Console.WriteLine("right " + right);
-                Console.WriteLine("size "+ nodes.Count);
+                }
                 while (nodes[right].getHeuristicValor() > pivot)
                 {
                     right--;

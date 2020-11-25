@@ -11,15 +11,9 @@ namespace iac.algorithms
             setInitialState(state);
             setDesiredSolution(solution);
         }
-
         private Node _currentNode = new Node();
-        
         private First_applicable _firstApplicable = new First_applicable();
-        
-        
-
-        Operation operation;
-
+        private Operation operation;
         public void findSolution()
         {   
             generatedStates.Clear();

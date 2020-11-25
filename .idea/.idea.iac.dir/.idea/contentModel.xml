@@ -7,6 +7,7 @@
       <e p=".gitignore" t="Include" />
       <e p="Program.cs" t="Include" />
       <e p="algorithms" t="Include">
+        <e p="a-start.cs" t="Include" />
         <e p="backtracking.cs" t="Include" />
         <e p="depth-search.cs" t="Include" />
         <e p="greedy-search.cs" t="Include" />

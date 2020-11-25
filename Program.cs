@@ -85,9 +85,12 @@ namespace iac
             GreedySearch greedySearch = new GreedySearch(initialState, solution);
             greedySearch.initalizeAlgorithmRules();
             
-            greedySearch.findSolution();
+            AStart astar = new AStart(initialState, solution);
+            astar.initalizeAlgorithmRules();
             
-            greedySearch.statistics.printStatistcs();
+            astar.findSolution();
+            
+            astar.statistics.printStatistcs();
         }
     }
 }

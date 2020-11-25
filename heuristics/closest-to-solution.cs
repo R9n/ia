@@ -20,7 +20,8 @@ namespace iac.heuristics
                     differenceAcumulated += solutionPitchers[i].getCurrentVolume() - nodePitchers[i].getCurrentVolume();
                 }
             }
-            return differenceAcumulated;
+            return Math.Abs(differenceAcumulated);
         }
+        
     }
 }

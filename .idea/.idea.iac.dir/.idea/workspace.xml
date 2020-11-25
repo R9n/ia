@@ -30,24 +30,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4e1999d-f266-4423-a01a-806600076bfb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/algorithms/greedy-search.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helpers/quick-sort-for-nodes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/heuristics/closest-to-solution.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithms/a-start.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.iac.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iac.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.iac.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iac.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/backtracking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/backtracking.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.runtimeconfig.dev.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.runtimeconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/control-strategy/first-applicable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/control-strategy/first-applicable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers/list-operators.cs" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/list-operators.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iac.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/iac.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/models/node.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/quick-sort-for-nodes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/quick-sort-for-nodes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/heuristics/closest-to-solution.cs" beforeDir="false" afterPath="$PROJECT_DIR$/heuristics/closest-to-solution.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.pdb" afterDir="false" />
     </list>
@@ -70,13 +61,10 @@
         <option value="$PROJECT_DIR$/models/pitcher.cs" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/rules/transfer.cs" />
-        <option value="$PROJECT_DIR$/algorithms/backtracking.cs" />
         <option value="$PROJECT_DIR$/models/statistics.cs" />
         <option value="$PROJECT_DIR$/algorithms/depth-search.cs" />
-        <option value="$PROJECT_DIR$/rules/fill.cs" />
         <option value="$PROJECT_DIR$/rules/drain-out.cs" />
         <option value="$PROJECT_DIR$/models/rule.cs" />
-        <option value="$PROJECT_DIR$/models/algorithm.cs" />
         <option value="$PROJECT_DIR$/algorithms/width-search.cs" />
         <option value="$PROJECT_DIR$/algorithms/ordered-search.cs" />
         <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/87DBB896-6B20-4A14-9B6A-7AB43642646D/d7/eb72f140/List`1.cs" />
@@ -84,11 +72,15 @@
         <option value="$PROJECT_DIR$/helpers/list-operators.cs" />
         <option value="$PROJECT_DIR$/helpers/quick-srot.cs" />
         <option value="$PROJECT_DIR$/models/node.cs" />
-        <option value="$PROJECT_DIR$/heuristics/closest-to-solution.cs" />
         <option value="$PROJECT_DIR$/control-strategy/first-applicable.cs" />
-        <option value="$PROJECT_DIR$/helpers/quick-sort-for-nodes.cs" />
-        <option value="$PROJECT_DIR$/Program.cs" />
         <option value="$PROJECT_DIR$/algorithms/greedy-search.cs" />
+        <option value="$PROJECT_DIR$/algorithms/backtracking.cs" />
+        <option value="$PROJECT_DIR$/models/algorithm.cs" />
+        <option value="$PROJECT_DIR$/helpers/quick-sort-for-nodes.cs" />
+        <option value="$PROJECT_DIR$/rules/fill.cs" />
+        <option value="$PROJECT_DIR$/heuristics/closest-to-solution.cs" />
+        <option value="$PROJECT_DIR$/Program.cs" />
+        <option value="$PROJECT_DIR$/algorithms/a-start.cs" />
       </list>
     </option>
   </component>
@@ -145,7 +137,8 @@
       <workItem from="1605444572004" duration="12259000" />
       <workItem from="1606165399527" duration="7739000" />
       <workItem from="1606229265726" duration="7557000" />
-      <workItem from="1606239545169" duration="9765000" />
+      <workItem from="1606239545169" duration="26597000" />
+      <workItem from="1606301084247" duration="2998000" />
     </task>
     <servers />
   </component>
@@ -183,34 +176,34 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1253" height="2" key="GridCell.Tab.0.bottom" timestamp="1606254368670">
+    <state width="1253" height="24" key="GridCell.Tab.0.bottom" timestamp="1606303505166">
       <screen x="63" y="28" width="1303" height="740" />
     </state>
     <state width="1253" height="91" key="GridCell.Tab.0.bottom/63.27.1303.741@63.27.1303.741" timestamp="1604924553543" />
-    <state width="1253" height="2" key="GridCell.Tab.0.bottom/63.28.1303.740@63.28.1303.740" timestamp="1606254368670" />
-    <state width="1253" height="2" key="GridCell.Tab.0.center" timestamp="1606254368669">
+    <state width="1253" height="24" key="GridCell.Tab.0.bottom/63.28.1303.740@63.28.1303.740" timestamp="1606303505166" />
+    <state width="1253" height="24" key="GridCell.Tab.0.center" timestamp="1606303505165">
       <screen x="63" y="28" width="1303" height="740" />
     </state>
     <state width="1253" height="91" key="GridCell.Tab.0.center/63.27.1303.741@63.27.1303.741" timestamp="1604924553542" />
-    <state width="1253" height="2" key="GridCell.Tab.0.center/63.28.1303.740@63.28.1303.740" timestamp="1606254368669" />
-    <state width="1253" height="2" key="GridCell.Tab.0.left" timestamp="1606254368669">
+    <state width="1253" height="24" key="GridCell.Tab.0.center/63.28.1303.740@63.28.1303.740" timestamp="1606303505165" />
+    <state width="1253" height="24" key="GridCell.Tab.0.left" timestamp="1606303505165">
       <screen x="63" y="28" width="1303" height="740" />
     </state>
     <state width="1253" height="91" key="GridCell.Tab.0.left/63.27.1303.741@63.27.1303.741" timestamp="1604924553542" />
-    <state width="1253" height="2" key="GridCell.Tab.0.left/63.28.1303.740@63.28.1303.740" timestamp="1606254368669" />
-    <state width="1253" height="2" key="GridCell.Tab.0.right" timestamp="1606254368670">
+    <state width="1253" height="24" key="GridCell.Tab.0.left/63.28.1303.740@63.28.1303.740" timestamp="1606303505165" />
+    <state width="1253" height="24" key="GridCell.Tab.0.right" timestamp="1606303505165">
       <screen x="63" y="28" width="1303" height="740" />
     </state>
     <state width="1253" height="91" key="GridCell.Tab.0.right/63.27.1303.741@63.27.1303.741" timestamp="1604924553543" />
-    <state width="1253" height="2" key="GridCell.Tab.0.right/63.28.1303.740@63.28.1303.740" timestamp="1606254368670" />
+    <state width="1253" height="24" key="GridCell.Tab.0.right/63.28.1303.740@63.28.1303.740" timestamp="1606303505165" />
     <state x="196" y="32" width="1037" height="731" key="SettingsEditor" timestamp="1604147845579">
       <screen x="63" y="27" width="1303" height="741" />
     </state>
     <state x="196" y="32" width="1037" height="731" key="SettingsEditor/63.27.1303.741@63.27.1303.741" timestamp="1604147845579" />
-    <state x="183" y="228" width="1103" height="540" key="VCS.FileHistoryDialog" timestamp="1605475419419">
+    <state x="183" y="228" width="1103" height="540" key="VCS.FileHistoryDialog" timestamp="1606255549178">
       <screen x="63" y="28" width="1303" height="740" />
     </state>
-    <state x="183" y="228" width="1103" height="540" key="VCS.FileHistoryDialog/63.28.1303.740@63.28.1303.740" timestamp="1605475419419" />
+    <state x="183" y="228" width="1103" height="540" key="VCS.FileHistoryDialog/63.28.1303.740@63.28.1303.740" timestamp="1606255549178" />
     <state x="63" y="27" width="770" height="741" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604779866491">
       <screen x="63" y="27" width="1303" height="741" />
     </state>
