@@ -11,6 +11,7 @@
         <e p="backtracking.cs" t="Include" />
         <e p="depth-search.cs" t="Include" />
         <e p="greedy-search.cs" t="Include" />
+        <e p="id-a-start.cs" t="Include" />
         <e p="ordered-search.cs" t="Include" />
         <e p="width-search.cs" t="Include" />
       </e>

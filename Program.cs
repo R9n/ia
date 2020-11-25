@@ -88,9 +88,12 @@ namespace iac
             AStart astar = new AStart(initialState, solution);
             astar.initalizeAlgorithmRules();
             
-            astar.findSolution();
+            idAStart idAstar = new idAStart(initialState, solution);
+            idAstar.initalizeAlgorithmRules();
             
-            astar.statistics.printStatistcs();
+            idAstar.findSolution();
+            
+            idAstar.statistics.printStatistcs();
         }
     }
 }

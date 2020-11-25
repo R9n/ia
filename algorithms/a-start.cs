@@ -75,7 +75,6 @@ namespace iac.algorithms
                                     aux.setPossibleOperations(generateOperationSet(aux));
                                     
                                     int minHeuristicValue = _currentNode.getHeuristicValor();
-                                    
                                     aux.setHeuristicValor(
                                         heuristics.getHeuriscValor(aux,getDesiredSolution()) +
                                         minHeuristicValue
