@@ -15,15 +15,16 @@ namespace iac.algorithms
         private First_applicable _firstApplicable = new First_applicable();
         private Operation operation;
         public void findSolution()
-        {   
+        {               
+            statistics.setStartTime(DateTime.Now.Millisecond);
             generatedStates.Clear();
             statistics._totalExpandedNodes += 1;
             statistics._totalVisitedNodes += 1;
-            statistics.setStartTime(DateTime.Now.Millisecond);
             _currentNode = getInitialState();
             generatedStates.Add(_currentNode);
             _currentNode.setPossibleOperations(generateOperationSet(_currentNode));
             _currentNode.setHasConfigured(true);
+
             while (true)
             {
                 if (_currentNode.getHasConfigured() == false)
@@ -50,11 +51,11 @@ namespace iac.algorithms
 
                         {
                             generateSolutionList(_currentNode);
-                            statistics.setEndTime(DateTime.Now.Millisecond);
                             _currentNode.setIsLeaf(true);
                             leafs.Add(_currentNode);
                             statistics.setSolution(getSolutionFound());
                             statistics.setAverageBranchingFactor(calculateAverageBranchingFactor());
+                            statistics.setEndTime(DateTime.Now.Millisecond);
                             break;
                         }
                     }

@@ -8,7 +8,7 @@ namespace iac.models
 
         public Instance(Node initialState,Node solution,int dimension)
         {
-            setSolution(initialState);
+            setInitialState(initialState);
             setSolution(solution);
             setDimension(dimension);
             

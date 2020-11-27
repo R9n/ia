@@ -24,12 +24,12 @@ namespace iac.algorithms
 
         public void findSolution()
         {           
+            statistics.setStartTime(DateTime.Now.Millisecond);
             generatedStates.Clear();
             _currentNode = getInitialState();
             statistics._totalExpandedNodes += 1;
             statistics._totalVisitedNodes += 1;
             _currentNode.setIsInitialState(true);
-            statistics.setStartTime(DateTime.Now.Millisecond);
             openNodes.Push(_currentNode);
             while (true)
             {
@@ -47,9 +47,10 @@ namespace iac.algorithms
                     if (isSolution(_currentNode, getDesiredSolution()))
                     {
                         generateSolutionList(_currentNode);
-                        statistics.setEndTime(DateTime.Now.Millisecond);
                         statistics.setSolution(getSolutionFound());
                         statistics.setAverageBranchingFactor(calculateAverageBranchingFactor());
+                        statistics.setEndTime(DateTime.Now.Millisecond);
+
                        break;
                     }
                     else

@@ -37,6 +37,7 @@ namespace iac.helpers
                 pitcher.setMaxVolume(Int32.Parse(data[maxVolumeIndex]));
                 pitcher.setCurrentVolume(Int32.Parse(data[currentVolumeIndex]));
                 pitcher.setName(data[nameIndex]);
+                pitcher.setIsFull((pitcher.getCurrentVolume()==pitcher.getMaxVolume()));
 
                 return pitcher;
             
@@ -56,7 +57,11 @@ namespace iac.helpers
             {
                 System.IO.StreamReader file =
                     new System.IO.StreamReader(dataPath);
-                line = file.ReadLine();
+                
+                Console.WriteLine("Carregando Dados...");   
+
+                line = file.ReadLine(); 
+                
             while(line != null)
             {
                lines++;
@@ -97,14 +102,21 @@ namespace iac.helpers
                          }
                          
                          solution.setPitchers(solutionPitchers);
+                         
                          initialState.setPitchers(initialStatePitchers);
                          initialState.setIsInitialState(true);
-                             
+                         initialState.setOperation("Estado inicial");
+                        
                          Instance newInstance = new Instance(initialState,solution,solutionDimension);
                          instances.Add(newInstance);
                          
                          if (line == InstanceMarkers.instanceFileEndMarker)
                          {
+                             foreach (var instance in instances)
+                             {
+                              Console.WriteLine(instance.getInitialState() == null);   
+                             }
+
                              break;
                          }
                     }

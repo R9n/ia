@@ -8,20 +8,12 @@ namespace iac
 {
     public class Menu
     {
-        private DataLoader instanceData;
-        private Backtracking backtracking;
-        private DepthSearch depthSearch;
-        private WidthSearch widthSearch;
-        private OrderedSearch orderedSearch;
-        private GreedySearch greedySearch;
-        private AStart astar;
-        private idAStart idAstar;
         private string option;
+        private AlgorithmRunner algorithmRunner;
         
-
         public Menu(DataLoader data)
-        { 
-            instanceData = data;
+        {
+            algorithmRunner = new AlgorithmRunner(data.getInstances());    
         }
 
         public void showMenu()
@@ -41,8 +33,7 @@ namespace iac
             Console.WriteLine("5 para rodar as instâncias através da Busca Gulosa");
             Console.WriteLine("6 para rodar as instâncias através da Busca A* (A-Estrela)");
             Console.WriteLine("7 para rodar as instâncias através da Busca IDA* (IDA-Estrela)");
-            Console.WriteLine("8 para limpar o console");
-            Console.WriteLine("9 Para sair");
+            Console.WriteLine("8 Para sair");
             Console.WriteLine();
             while (option != MenuOptions.exitOption)
             {           
@@ -53,41 +44,23 @@ namespace iac
                     Console.WriteLine("Opção Inválida");
                     continue;
                 }
-                switch (option)
+                
+                if (option == MenuOptions.exitOption)
                 {
-                    case MenuOptions.backTrackingOption:
-                        break;
-                    case MenuOptions.depthSearchOption:
-                        break;
-                    case MenuOptions.widthSearchOption:
-                        break;
-                    case MenuOptions.orderedSearchOption:
-                        break;
-                    case MenuOptions.greedySearchOption:
-                        break;
-                    case MenuOptions.astarOption:
-                        break;
-                    case MenuOptions.idAstarOption:
-                        break;
-                    case MenuOptions.exitOption:
-                        break;
-                    default:
-                        Console.WriteLine("Opção não reconhecida. Por favor tente novamente");
-                        break;
+                    Console.WriteLine("Saindo...");
+                    continue;
                 }
-
+                
+                algorithmRunner.runAlgorithm(option);
+                
+                foreach (var statisticse in algorithmRunner.getStatistics())
+                {
+                   statisticse.printStatistcs();
+                }
+                
             }
             
-            Console.WriteLine("Saindo...");
-           
-                
-            
-            
         }
-        
-        
-        
-        
         
     }
 }

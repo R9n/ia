@@ -40,13 +40,13 @@ namespace iac.algorithms
                 {
                     _currentNode = openNodes.Dequeue();
                     statistics._totalVisitedNodes += 1;
-
                     if (isSolution(_currentNode, getDesiredSolution()))
                     {
                         generateSolutionList(_currentNode);
-                        statistics.setEndTime(DateTime.Now.Millisecond);
                         statistics.setSolution(getSolutionFound());
                         statistics.setAverageBranchingFactor(calculateAverageBranchingFactor());
+                        statistics.setEndTime(DateTime.Now.Millisecond);
+
                         break;
                     }
                     else
@@ -63,10 +63,11 @@ namespace iac.algorithms
                                 operation.setHasTried(true);
                                 ruleToApply = generateRule(operation);
                                 Node aux = ruleToApply.applyRule(_currentNode,operation);
-                                statistics._totalExpandedNodes += 1;
                                 
                                 if (hasBeenAlreadyGenerated(aux) == false)
                                 {
+                                    statistics._totalExpandedNodes += 1;
+
                                     generatedStates.Add(aux);
                                     openNodes.Enqueue(aux);
                                 }

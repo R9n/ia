@@ -11,15 +11,17 @@ namespace iac.models
         public int _totalExpandedNodes=0;
         public int _totalVisitedNodes=0;
         private double _averageBranchingFactor=0;
+        private int instanceDimension;
 
 
         public void printStatistcs()
         {
             Console.WriteLine("===============================================");
+            Console.WriteLine("Dimensão da instência: "+instanceDimension+" jarros");
             Console.WriteLine("Total de nós expandidos: "+_totalExpandedNodes);
             Console.WriteLine("Total de nós visitados: "+_totalVisitedNodes);
             Console.WriteLine("Fator médio de ramificação "+_averageBranchingFactor);
-            Console.WriteLine("Tempo total de execução: "+getExecutionTime()+"Milissegundos");
+            Console.WriteLine("Tempo total de execução: "+getExecutionTime()+" Milissegundos");
             Console.WriteLine("Profundidade da solução: "+getSolutionDeep());
             Console.WriteLine("Caminho da solução:");
 
@@ -29,6 +31,18 @@ namespace iac.models
             }
             Console.WriteLine("===============================================");
         }
+        
+        public int getInstanceDimension()
+        {
+            return instanceDimension;
+        }
+
+        public void setInstanceDimension(int value)
+        {
+            instanceDimension = value;
+        }
+        
+        
         
         public double getExecutionTime()
         {

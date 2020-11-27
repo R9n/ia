@@ -22,6 +22,7 @@
       </e>
       <e p="global-variables.cs" t="Include" />
       <e p="helpers" t="Include">
+        <e p="algorithm-runner.cs" t="Include" />
         <e p="data-loader.cs" t="Include" />
         <e p="ids-handler.cs" t="Include" />
         <e p="instance-markers.cs" t="Include" />
