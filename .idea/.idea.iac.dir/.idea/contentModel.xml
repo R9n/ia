@@ -5,6 +5,7 @@
     <e p="$USER_HOME$/.cache/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_.19.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p=".gitignore" t="Include" />
+      <e p="Empty File" t="Include" />
       <e p="Program.cs" t="Include" />
       <e p="algorithms" t="Include">
         <e p="a-start.cs" t="Include" />
@@ -21,7 +22,9 @@
       </e>
       <e p="global-variables.cs" t="Include" />
       <e p="helpers" t="Include">
+        <e p="data-loader.cs" t="Include" />
         <e p="ids-handler.cs" t="Include" />
+        <e p="instance-markers.cs" t="Include" />
         <e p="list-operators.cs" t="Include" />
         <e p="quick-sort-for-nodes.cs" t="Include" />
       </e>
@@ -29,8 +32,10 @@
         <e p="closest-to-solution.cs" t="Include" />
       </e>
       <e p="iac.csproj" t="IncludeRecursive" />
+      <e p="instancia.txt" t="Include" />
       <e p="models" t="Include">
         <e p="algorithm.cs" t="Include" />
+        <e p="instance.cs" t="Include" />
         <e p="node.cs" t="Include" />
         <e p="operation.cs" t="Include" />
         <e p="pitcher.cs" t="Include" />
@@ -51,6 +56,7 @@
         <e p="fill.cs" t="Include" />
         <e p="transfer.cs" t="Include" />
       </e>
+      <e p="vazio.txt" t="Include" />
     </e>
   </component>
 </project>

@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using iac.algorithms;
+using iac.helpers;
 using iac.models;
 
 namespace iac
@@ -9,6 +9,7 @@ namespace iac
     {
         static void Main(string[] args)
         {
+            
             //solução  
             Node solution = new Node();
             Pitcher pitcherC = new Pitcher();
@@ -32,7 +33,6 @@ namespace iac
             solutionPitchers.Add(pitcherC);
             solutionPitchers.Add(pitcherD);
             solutionPitchers.Add(pitcherE);
-        
             
             solution.setPitchers(solutionPitchers);
 
@@ -43,17 +43,19 @@ namespace iac
             Pitcher pitcherB = new Pitcher();
             Pitcher pitcherF = new Pitcher();
             
-            pitcherB.setCurrentVolume(0);
-            pitcherB.setMaxVolume(3);
-            pitcherB.setName("B");
-            
-            pitcherA.setName("A");
             pitcherA.setMaxVolume(4);
             pitcherA.setCurrentVolume(0);
+            pitcherA.setName("A");
+
             
-            pitcherF.setName("C");
+            pitcherB.setMaxVolume(3);
+            pitcherB.setCurrentVolume(0);
+            pitcherB.setName("B");
+            
             pitcherF.setMaxVolume(5);
             pitcherF.setCurrentVolume(0);
+            pitcherF.setName("C");
+
             
             
             List<Pitcher> pitchers = new List<Pitcher>();
@@ -91,9 +93,12 @@ namespace iac
             idAStart idAstar = new idAStart(initialState, solution);
             idAstar.initalizeAlgorithmRules();
             
-            idAstar.findSolution();
+           // idAstar.findSolution();
             
-            idAstar.statistics.printStatistcs();
+            //idAstar.statistics.printStatistcs();
+            
+            DataLoader dataLoader = new DataLoader("/home/ark/RiderProjects/iac/instancia.txt");
+            
         }
     }
 }

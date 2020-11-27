@@ -1,0 +1,41 @@
+! Formato dos dados:
+!
+! ------------------------------- = marcador de início de instância.
+!
+! ! = sinal para ignorar uma linha, como um comentário.
+!
+! X,Y,"Z" = configuraçaõ dos jarros, x=volume máximo, Y= volume atual, Z = nome.
+!
+! --------------- = Separador entre a solução e o estado incial, o primeiro nó depois   
+!                   do marcador do início de instancia é sempre a solução.
+!
+! Os jarros do nó solução que não importam possuem volume total igual -1.
+!
+! O volume total da solução é zero pois importa o volume atual dela.
+! 
+!
+-------------------------------
+4,2,"A"
+-1,0,"B"
+-1,0,"C"
+---------------
+4,0,"A"
+3,0,"B"
+5,0,"C"
+-------------------------------
+0,3,"A"
+-1,0,"B"
+-1,0,"C"
+---------------
+7,0,"A"
+1,0,"B"
+9,0,"C"
+-------------------------------
+-1,0,"A"
+0,9,"B"
+-1,0,"C"
+---------------
+7,0,"A"
+10,1,"B"
+9,0,"C"
+EOF
