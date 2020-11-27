@@ -55,6 +55,7 @@ namespace iac.algorithms
                         generateSolutionPath(_currentNode);
                         statistics.setSolution(getSolutionFound());
                         statistics.setAverageBranchingFactor(calculateAverageBranchingFactor());
+                        statistics.setSolutionCost(_currentNode.getHeuristicValor());
                         statistics.setEndTime(DateTime.Now.Millisecond);
                         break;
                     }

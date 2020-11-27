@@ -17,6 +17,7 @@ namespace iac.models
         private bool _isLeaf = false;
         private int _id;
         private int heuristicValor = 0;
+        private Operation generatedBy;
 
         public Node()
         {
@@ -34,8 +35,18 @@ namespace iac.models
             heuristicValor = node.getHeuristicValor();
             _pitchers = node.getPitchers();
             _id = Global_variables.idsHandler.getNextId();
+            generatedBy = node.getGenereatedByOperation();
         }
 
+        
+        public Operation getGenereatedByOperation()
+        {
+            return generatedBy; 
+        }
+        public void setGenereatedByOperation(Operation value)
+        {
+            generatedBy = value;
+        }
         
         public int getHeuristicValor()
         {

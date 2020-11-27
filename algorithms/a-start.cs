@@ -54,9 +54,10 @@ namespace iac.algorithms
                      if (isSolution(_currentNode, getDesiredSolution()))
                      {
                          generateSolutionPath(_currentNode);
-                         statistics.setEndTime(DateTime.Now.Millisecond);
                          statistics.setSolution(getSolutionFound());
                          statistics.setAverageBranchingFactor(calculateAverageBranchingFactor());
+                         statistics.setSolutionCost(_currentNode.getHeuristicValor());
+                         statistics.setEndTime(DateTime.Now.Millisecond);
                          break;
                      }
                     else
@@ -70,6 +71,7 @@ namespace iac.algorithms
                             {   operation.setHasTried(true); 
                                 ruleToApply = generateRule(operation);
                                 Node aux = ruleToApply.applyRule(_currentNode, operation);
+                                aux.setGenereatedByOperation(operation);
                                 if (hasBeenAlreadyGenerated(aux) == false)
                                 {
                                     aux.setPossibleOperations(generateOperationSet(aux));

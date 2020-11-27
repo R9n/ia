@@ -14,7 +14,7 @@ namespace iac.models
         private double _averageBranchingFactor=0;
         private int instanceDimension;
         private string algorithmName;
-        private string solutionCost;
+        private int solutionCost;
 
 
         public void printStatistcs()
@@ -44,8 +44,8 @@ namespace iac.models
             try
             {
                 
-                //string filePath = @$"./{algorithmName}-for-{instanceDimension}-jarros.txt";
-                string filePath = @$"/home/ark/RiderProjects/iac/generatedStatistics/{algorithmName}-for-{instanceDimension}-jarros.txt";
+                string filePath = @$"./{algorithmName}-for-{instanceDimension}-jarros.txt";
+               // string filePath = @$"/home/ark/RiderProjects/iac/generatedStatistics/{algorithmName}-for-{instanceDimension}-pitchers.txt";
                 System.IO.File.WriteAllText(filePath, "");
                 System.IO.StreamWriter file =
                     new System.IO.StreamWriter(filePath);
@@ -68,6 +68,7 @@ namespace iac.models
                     file.WriteLine(s);
                 }
                 file.WriteLine("===============================================");
+                Console.WriteLine($"O resultado da execução do algoritmo {algorithmName} pode ser encontrado em: {filePath}");
                 file.Close();   
             }
             catch (Exception e)
@@ -82,6 +83,12 @@ namespace iac.models
         {
             instanceDimension = value;
         }
+        
+        public void setSolutionCost(int value)
+        {
+            solutionCost = value;
+        }
+        
         
 
         public void setAlgorithmName(string value)

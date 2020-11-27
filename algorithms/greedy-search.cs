@@ -23,7 +23,10 @@ namespace iac.algorithms
         private Rule ruleToApply;
         private QuickSort quickSort = new QuickSort();
         private ClosestToSolutionHeuristic heuristic = new ClosestToSolutionHeuristic();
-        private Node auxToRemove; 
+        private Node auxToRemove;
+        private int solutionCost=0;
+        
+        
         public void findSolution()
         {           
             statistics.setStartTime(DateTime.Now.Millisecond);
@@ -55,6 +58,7 @@ namespace iac.algorithms
                         generateSolutionPath(_currentNode);
                         statistics.setSolution(getSolutionFound());
                         statistics.setAverageBranchingFactor(calculateAverageBranchingFactor());
+                        statistics.setSolutionCost(solutionCost);
                         statistics.setEndTime(DateTime.Now.Millisecond);
 
                        break;
@@ -69,7 +73,7 @@ namespace iac.algorithms
                             if (operation != null)
                             {
                                 
-                                operation.setHasTried(true); 
+                                operation.setHasTried(true);
                                 ruleToApply = generateRule(operation);
                                 Node aux = ruleToApply.applyRule(_currentNode,operation);
                                 aux.printState();
@@ -78,6 +82,7 @@ namespace iac.algorithms
                                     generatedStates.Add(aux);
                                     openNodes.Add(aux);
                                     aux.setHeuristicValor(heuristic.getHeuriscValor(aux,getSolution()));
+                                    solutionCost += aux.getHeuristicValor();
                                     quickSort.sort(nodes:openNodes,0,openNodes.Count-1);
                                 }
                             }

@@ -20,11 +20,7 @@
       <e p="control-strategy" t="Include">
         <e p="first-applicable.cs" t="Include" />
       </e>
-      <e p="generatedStatistics" t="Include">
-        <e p="BackTracking-for-3-jarros.txt" t="Include" />
-        <e p="BackTracking-for-5-jarros.txt" t="Include" />
-        <e p="BackTracking-for-6-jarros.txt" t="Include" />
-      </e>
+      <e p="generatedStatistics" t="Include" />
       <e p="global-variables.cs" t="Include" />
       <e p="helpers" t="Include">
         <e p="algorithm-runner.cs" t="Include" />

@@ -40,8 +40,8 @@ namespace iac.algorithms
                 { 
                     operation.setHasTried(true);
                     Rule rule = generateRule(operation);
-                    
                     _currentNode = rule.applyRule(_currentNode, operation);
+                    _currentNode.setGenereatedByOperation(operation);
                     statistics._totalExpandedNodes += 1;
                     statistics._totalVisitedNodes += 1;
                     _currentNode.setPossibleOperations(generateOperationSet(_currentNode));
@@ -56,6 +56,7 @@ namespace iac.algorithms
                             leafs.Add(_currentNode);
                             statistics.setSolution(getSolutionFound());
                             statistics.setAverageBranchingFactor(calculateAverageBranchingFactor());
+                            statistics.setSolutionCost(getSolutionFound().Count);
                             statistics.setEndTime(DateTime.Now.Millisecond);
                             break;
                         }

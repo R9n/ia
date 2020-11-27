@@ -46,6 +46,7 @@ namespace iac.algorithms
                         generateSolutionPath(_currentNode);
                         statistics.setSolution(getSolutionFound());
                         statistics.setAverageBranchingFactor(calculateAverageBranchingFactor());
+                        statistics.setSolutionCost(getSolutionFound().Count);
                         statistics.setEndTime(DateTime.Now.Millisecond);
 
                         break;
@@ -64,7 +65,6 @@ namespace iac.algorithms
                                 operation.setHasTried(true);
                                 ruleToApply = generateRule(operation);
                                 Node aux = ruleToApply.applyRule(_currentNode,operation);
-                                
                                 if (hasBeenAlreadyGenerated(aux) == false)
                                 {
                                     statistics._totalExpandedNodes += 1;

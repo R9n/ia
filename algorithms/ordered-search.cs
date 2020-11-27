@@ -18,8 +18,34 @@ namespace iac.algorithms
             private List<Node> closedNodes = new List<Node>();
 
         private First_applicable _firstApplicable = new First_applicable();
-        
+
         Operation operation;
+
+
+        private void calculateSolutionCost()
+        {
+            int cost = 0;
+            Node node = _currentNode;
+            while (node.getIsInitialState() != true)
+            {
+                switch (node.getGenereatedByOperation().getRuleType())
+                {
+                    case ruleTypes.RulesTypes.fill:
+                        cost++; 
+                        break;
+                    case ruleTypes.RulesTypes.transfer:
+                        cost++; 
+                        break;
+                    case ruleTypes.RulesTypes.drainOut:
+                        cost++; 
+                        break;
+                }
+                node = node.getFather();
+
+            }
+            statistics.setSolutionCost(cost);
+        }
+        
 
         public void findSolution()
         {
@@ -49,6 +75,7 @@ namespace iac.algorithms
                         generateSolutionPath(_currentNode);
                         statistics.setSolution(getSolutionFound());
                         statistics.setAverageBranchingFactor(calculateAverageBranchingFactor());
+                        calculateSolutionCost();
                         statistics.setEndTime(DateTime.Now.Millisecond);
                         break;
                     }
@@ -66,7 +93,7 @@ namespace iac.algorithms
                                 operation.setHasTried(true);
                                 ruleToApply = generateRule(operation);
                                 Node aux = ruleToApply.applyRule(_currentNode,operation);
-                                
+                                aux.setGenereatedByOperation(operation);
                                 if (hasBeenAlreadyGenerated(aux) == false)
                                 {
                                     statistics._totalExpandedNodes += 1;
