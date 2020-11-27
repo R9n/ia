@@ -7,7 +7,7 @@ namespace iac.models
     public class Node
     {
         private List<Pitcher> _pitchers = new List<Pitcher>();
-        private Node _father;
+        private Node father;
         private bool _isProcessed;
         private bool _isInitialState;
         private List<Node> _generatedNodes;
@@ -25,10 +25,8 @@ namespace iac.models
         
         public Node(Node node)
         {
-            _father = node.getFather();
-            _isProcessed = node.getIsProcessed();
+            father = node.getFather();
             _isInitialState = node.getIsInitialState();
-            _generatedNodes = node.getGeneratedNodes();
             _generatingOperation = node._generatingOperation;
             possibleOperations = node.getPossibleOperations();
             _hasConfigured = node.getHasConfigured();
@@ -91,17 +89,6 @@ namespace iac.models
         }
         
         
-        public int getPitcherIndexById(int id)
-        {
-            for (int i = 0; i < _pitchers.Count; i++)
-            {
-                if (_pitchers[i].getId() == id)
-                {
-                    return i;
-                }
-            }
-            return -1;
-        }
         
         public void printState()
         {       
@@ -138,14 +125,6 @@ namespace iac.models
             return _generatingOperation; 
         }
         
-        public void setGeneratedNodes(Node node)
-        {
-            _generatedNodes.Add(node);
-        }
-        public List<Node> getGeneratedNodes()
-        {
-            return _generatedNodes; 
-        }
 
         public Pitcher getPitcherById(int pitcherId)
         {
@@ -181,29 +160,18 @@ namespace iac.models
         {
             return _isInitialState; 
         }
-
         
-        
-        public void setIsProcessed(bool value)
-        {
-            _isProcessed = value;
-        }
-        public bool getIsProcessed()
-        {
-            return _isProcessed; 
-        }
         
         public void setFather(Node father)
         {
-            _father = father;
+            this.father = father;
         }
         public Node getFather()
         {
-            return _father; 
+            return father; 
         }
         
         
-
         public void setPitchers(List<Pitcher> pitchers)
         {
             _pitchers = pitchers;
@@ -212,12 +180,6 @@ namespace iac.models
         {
             return _pitchers; 
         }
-        
-        
-        
-        
-        
-        
         
     }
 }

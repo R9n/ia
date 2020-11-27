@@ -7,6 +7,5 @@ namespace iac.helpers
        public static string solutionEndMarker = "---------------";
        public static string instanceFileEndMarker = "EOF";
        
-
     }
 }

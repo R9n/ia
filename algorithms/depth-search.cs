@@ -46,7 +46,7 @@ namespace iac.algorithms
 
                     if (isSolution(_currentNode, getDesiredSolution()))
                     {
-                        generateSolutionList(_currentNode);
+                        generateSolutionPath(_currentNode);
                         statistics.setSolution(getSolutionFound());
                         statistics.setAverageBranchingFactor(calculateAverageBranchingFactor());
                         statistics.setEndTime(DateTime.Now.Millisecond);

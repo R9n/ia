@@ -123,7 +123,7 @@ namespace iac.models
             return _InitialState;
         }
 
-        public  void generateSolutionList(Node node)
+        public  void generateSolutionPath(Node node)
         {
             Node aux = new Node();
             aux = node;
@@ -183,13 +183,7 @@ namespace iac.models
                 }
                 
             }
-            
-
             return false;
-
         }
-        
-  
-        
     }
 }

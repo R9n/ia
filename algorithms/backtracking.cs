@@ -50,7 +50,7 @@ namespace iac.algorithms
                         if (isSolution(_currentNode, getSolution()))
 
                         {
-                            generateSolutionList(_currentNode);
+                            generateSolutionPath(_currentNode);
                             _currentNode.setIsLeaf(true);
                             leafs.Add(_currentNode);
                             statistics.setSolution(getSolutionFound());

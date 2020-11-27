@@ -2,7 +2,7 @@ namespace iac.models
 {
     public class Operation
     {
-        private ruleTypes.RulesTypes _rule;
+        private ruleTypes.RulesTypes _ruleType;
         private int _origin;
         private int _destiny;
         private bool _hasTried;
@@ -17,7 +17,7 @@ namespace iac.models
         
         public void setRule(ruleTypes.RulesTypes ruleType)
         {
-            _rule = ruleType;
+            _ruleType = ruleType;
         }
 
         public void setOrigin(int id)
@@ -37,7 +37,7 @@ namespace iac.models
 
         public ruleTypes.RulesTypes getRuleType()
         {
-            return _rule;
+            return _ruleType;
         }
 
         public int getOrigin()

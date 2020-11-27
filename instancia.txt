@@ -12,8 +12,9 @@
 ! Os jarros do nó solução que não importam possuem volume total igual -1.
 !
 ! O volume total da solução é zero pois importa o volume atual dela.
-! 
 !
+! EOF =  marcador de fim de arquivo
+! 
 -------------------------------
 4,2,"A"
 -1,0,"B"

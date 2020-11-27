@@ -50,7 +50,7 @@ namespace iac.algorithms
                 {            
                     if (isSolution(_currentNode, getDesiredSolution()) && _currentNode.getHeuristicValor() < patamar)
                     {
-                        generateSolutionList(_currentNode);
+                        generateSolutionPath(_currentNode);
                         statistics.setSolution(getSolutionFound());
                         statistics.setAverageBranchingFactor(calculateAverageBranchingFactor());
                         statistics.setEndTime(DateTime.Now.Millisecond);

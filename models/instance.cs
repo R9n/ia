@@ -14,9 +14,7 @@ namespace iac.models
             
             
         }
-
         
-            
         public void setDimension(int value)
         {
             dimension = value;

@@ -14,7 +14,6 @@ namespace iac.algorithms
             setInitialState(state);
             setDesiredSolution(solution);
         }
-        private Statistics _statistics = new Statistics();
         private Node _currentNode =  new Node();
         private  List<Node> openNodes = new List<Node>();
         private  List<Node> closedNodes = new List<Node>();
@@ -53,7 +52,7 @@ namespace iac.algorithms
                    
                      if (isSolution(_currentNode, getDesiredSolution()))
                      {
-                         generateSolutionList(_currentNode);
+                         generateSolutionPath(_currentNode);
                          statistics.setEndTime(DateTime.Now.Millisecond);
                          statistics.setSolution(getSolutionFound());
                          statistics.setAverageBranchingFactor(calculateAverageBranchingFactor());

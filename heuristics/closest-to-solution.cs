@@ -10,7 +10,6 @@ namespace iac.heuristics
         {
             List<Pitcher> nodePitchers=node.getPitchers();
             List<Pitcher> solutionPitchers = solution.getPitchers();
-            int difference = 0;
             int differenceAcumulated = 0;
             
             for (int i = 0; i < nodePitchers.Count; i++)

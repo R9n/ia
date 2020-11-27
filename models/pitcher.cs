@@ -86,7 +86,6 @@ namespace iac.models
         
         public Pitcher(Pitcher pitcher)
         {
-
             _currentVolume = pitcher.getCurrentVolume();
             _maxVolume = pitcher.getMaxVolume();
             _isFull = pitcher.getIsFull();
