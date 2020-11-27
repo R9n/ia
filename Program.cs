@@ -71,34 +71,14 @@ namespace iac
             
             initialState.setOperation("Estado inicial");
 
-
-            Backtracking backtracking = new Backtracking(initialState, solution);
-            backtracking.initalizeAlgorithmRules();
-            
-            DepthSearch depthSearch = new DepthSearch(initialState, solution);
-            depthSearch.initalizeAlgorithmRules();
-            
-            WidthSearch widthSearch = new WidthSearch(initialState, solution);
-            widthSearch.initalizeAlgorithmRules();
-            
-            OrderedSearch orderedSearch = new OrderedSearch(initialState, solution);
-            orderedSearch.initalizeAlgorithmRules();
-            
-            GreedySearch greedySearch = new GreedySearch(initialState, solution);
-            greedySearch.initalizeAlgorithmRules();
-            
-            AStart astar = new AStart(initialState, solution);
-            astar.initalizeAlgorithmRules();
-            
-            idAStart idAstar = new idAStart(initialState, solution);
-            idAstar.initalizeAlgorithmRules();
             
            // idAstar.findSolution();
             
             //idAstar.statistics.printStatistcs();
             
             DataLoader dataLoader = new DataLoader("/home/ark/RiderProjects/iac/instancia.txt");
-            
+            Menu menu= new Menu(dataLoader);
+            menu.showMenu();
         }
     }
 }

@@ -22,9 +22,7 @@ namespace iac.helpers
 
         private Pitcher generatePitcher(string dataString)
         {
-            try
-            {
-                int maxVolumeIndex = 0;
+            int maxVolumeIndex = 0;
                 int currentVolumeIndex = 1;
                 int nameIndex = 2;
             
@@ -41,12 +39,7 @@ namespace iac.helpers
                 pitcher.setName(data[nameIndex]);
 
                 return pitcher;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            
         }
         
         public DataLoader(string dataPath)
@@ -59,9 +52,11 @@ namespace iac.helpers
             {
                 throw new Exception("O caminho do arquivo de instências não pode ser vazio");
             }
-            System.IO.StreamReader file =
-                new System.IO.StreamReader(dataPath);
-            line = file.ReadLine();
+            try
+            {
+                System.IO.StreamReader file =
+                    new System.IO.StreamReader(dataPath);
+                line = file.ReadLine();
             while(line != null)
             {
                lines++;
@@ -105,7 +100,7 @@ namespace iac.helpers
                          initialState.setPitchers(initialStatePitchers);
                          initialState.setIsInitialState(true);
                              
-                         Instance newInstance = new Instance(initialState,solution);
+                         Instance newInstance = new Instance(initialState,solution,solutionDimension);
                          instances.Add(newInstance);
                          
                          if (line == InstanceMarkers.instanceFileEndMarker)
@@ -126,7 +121,15 @@ namespace iac.helpers
             {
                 throw new Exception("Arquivo de instâncias vazio");
             }
+            
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw new Exception(e.Message);
+            }
 
         }
     }
+        
 }

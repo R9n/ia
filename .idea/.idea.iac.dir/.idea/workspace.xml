@@ -30,19 +30,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4e1999d-f266-4423-a01a-806600076bfb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Empty File" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helpers/data-loader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helpers/instance-markers.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/instancia.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/instance.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vazio.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/menu-options.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.iac.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iac.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.iac.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iac.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/iac.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/data-loader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/data-loader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/instance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/models/instance.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/iac.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ruleTypes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/ruleTypes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vazio.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,11 +83,13 @@
         <option value="$PROJECT_DIR$/heuristics/closest-to-solution.cs" />
         <option value="$PROJECT_DIR$/algorithms/a-start.cs" />
         <option value="$PROJECT_DIR$/algorithms/id-a-start.cs" />
+        <option value="$PROJECT_DIR$/helpers/instance-markers.cs" />
+        <option value="$PROJECT_DIR$/instancia.txt" />
         <option value="$PROJECT_DIR$/models/instance.cs" />
         <option value="$PROJECT_DIR$/Program.cs" />
-        <option value="$PROJECT_DIR$/helpers/instance-markers.cs" />
         <option value="$PROJECT_DIR$/helpers/data-loader.cs" />
-        <option value="$PROJECT_DIR$/instancia.txt" />
+        <option value="$PROJECT_DIR$/helpers/menu-options.cs" />
+        <option value="$PROJECT_DIR$/menu.cs" />
       </list>
     </option>
   </component>
@@ -146,7 +148,7 @@
       <workItem from="1606229265726" duration="7557000" />
       <workItem from="1606239545169" duration="26597000" />
       <workItem from="1606301084247" duration="6980000" />
-      <workItem from="1606407830364" duration="15213000" />
+      <workItem from="1606407830364" duration="21775000" />
     </task>
     <servers />
   </component>
@@ -184,26 +186,26 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1253" height="2" key="GridCell.Tab.0.bottom" timestamp="1606435042586">
+    <state width="1253" height="60" key="GridCell.Tab.0.bottom" timestamp="1606440934950">
       <screen x="63" y="28" width="1303" height="740" />
     </state>
     <state width="1253" height="91" key="GridCell.Tab.0.bottom/63.27.1303.741@63.27.1303.741" timestamp="1604924553543" />
-    <state width="1253" height="2" key="GridCell.Tab.0.bottom/63.28.1303.740@63.28.1303.740" timestamp="1606435042586" />
-    <state width="1253" height="2" key="GridCell.Tab.0.center" timestamp="1606435042586">
+    <state width="1253" height="60" key="GridCell.Tab.0.bottom/63.28.1303.740@63.28.1303.740" timestamp="1606440934950" />
+    <state width="1253" height="60" key="GridCell.Tab.0.center" timestamp="1606440934950">
       <screen x="63" y="28" width="1303" height="740" />
     </state>
     <state width="1253" height="91" key="GridCell.Tab.0.center/63.27.1303.741@63.27.1303.741" timestamp="1604924553542" />
-    <state width="1253" height="2" key="GridCell.Tab.0.center/63.28.1303.740@63.28.1303.740" timestamp="1606435042586" />
-    <state width="1253" height="2" key="GridCell.Tab.0.left" timestamp="1606435042586">
+    <state width="1253" height="60" key="GridCell.Tab.0.center/63.28.1303.740@63.28.1303.740" timestamp="1606440934950" />
+    <state width="1253" height="60" key="GridCell.Tab.0.left" timestamp="1606440934949">
       <screen x="63" y="28" width="1303" height="740" />
     </state>
     <state width="1253" height="91" key="GridCell.Tab.0.left/63.27.1303.741@63.27.1303.741" timestamp="1604924553542" />
-    <state width="1253" height="2" key="GridCell.Tab.0.left/63.28.1303.740@63.28.1303.740" timestamp="1606435042586" />
-    <state width="1253" height="2" key="GridCell.Tab.0.right" timestamp="1606435042586">
+    <state width="1253" height="60" key="GridCell.Tab.0.left/63.28.1303.740@63.28.1303.740" timestamp="1606440934949" />
+    <state width="1253" height="60" key="GridCell.Tab.0.right" timestamp="1606440934950">
       <screen x="63" y="28" width="1303" height="740" />
     </state>
     <state width="1253" height="91" key="GridCell.Tab.0.right/63.27.1303.741@63.27.1303.741" timestamp="1604924553543" />
-    <state width="1253" height="2" key="GridCell.Tab.0.right/63.28.1303.740@63.28.1303.740" timestamp="1606435042586" />
+    <state width="1253" height="60" key="GridCell.Tab.0.right/63.28.1303.740@63.28.1303.740" timestamp="1606440934950" />
     <state x="196" y="32" width="1037" height="731" key="SettingsEditor" timestamp="1604147845579">
       <screen x="63" y="27" width="1303" height="741" />
     </state>

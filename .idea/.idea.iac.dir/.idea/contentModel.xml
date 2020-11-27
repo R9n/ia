@@ -26,13 +26,16 @@
         <e p="ids-handler.cs" t="Include" />
         <e p="instance-markers.cs" t="Include" />
         <e p="list-operators.cs" t="Include" />
+        <e p="menu-options.cs" t="Include" />
         <e p="quick-sort-for-nodes.cs" t="Include" />
+        <e p="ruleTypes.cs" t="Include" />
       </e>
       <e p="heuristics" t="Include">
         <e p="closest-to-solution.cs" t="Include" />
       </e>
       <e p="iac.csproj" t="IncludeRecursive" />
       <e p="instancia.txt" t="Include" />
+      <e p="menu.cs" t="Include" />
       <e p="models" t="Include">
         <e p="algorithm.cs" t="Include" />
         <e p="instance.cs" t="Include" />
@@ -50,13 +53,11 @@
         </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
-      <e p="ruleTypes.cs" t="Include" />
       <e p="rules" t="Include">
         <e p="drain-out.cs" t="Include" />
         <e p="fill.cs" t="Include" />
         <e p="transfer.cs" t="Include" />
       </e>
-      <e p="vazio.txt" t="Include" />
     </e>
   </component>
 </project>

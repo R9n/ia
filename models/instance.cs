@@ -4,14 +4,27 @@ namespace iac.models
     {
         private Node solution;
         private Node InitialSate;
+        private int dimension;
 
-        public Instance(Node initialState,Node solution)
+        public Instance(Node initialState,Node solution,int dimension)
         {
             setSolution(initialState);
             setSolution(solution);
+            setDimension(dimension);
+            
             
         }
 
+        
+            
+        public void setDimension(int value)
+        {
+            dimension = value;
+        }
+        public int getDimension()
+        {
+            return dimension;
+        }
         public Node getSolution()
         {
             return solution;
