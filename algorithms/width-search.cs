@@ -22,10 +22,11 @@ namespace iac.algorithms
 
         public void findSolution()
         {
+            statistics.setStartTime(DateTime.Now.Millisecond);
+            statistics.setAlgorithmName("Busca em largura");
             generatedStates.Clear();
             statistics._totalExpandedNodes += 1;
             statistics._totalVisitedNodes += 1;
-            statistics.setStartTime(DateTime.Now.Millisecond);
             _currentNode = getInitialState();
             generatedStates.Add(_currentNode);
             openNodes.Enqueue(_currentNode);

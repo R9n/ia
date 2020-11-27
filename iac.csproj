@@ -19,5 +19,9 @@
     <ItemGroup>
       <None Remove="enums\**" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="generatedStatistics" />
+    </ItemGroup>
 </Project>
 

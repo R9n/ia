@@ -27,10 +27,11 @@ namespace iac.algorithms
         
         public void findSolution()
         {
+            statistics.setStartTime(DateTime.Now.Millisecond);
             generatedStates.Clear();
+            statistics.setAlgorithmName("A*");
             statistics._totalExpandedNodes += 1;
             statistics._totalVisitedNodes += 1;
-            statistics.setStartTime(DateTime.Now.Millisecond);
             _currentNode = getInitialState();
             generatedStates.Add(_currentNode);
             _currentNode.setHeuristicValor(heuristics.getHeuriscValor(_currentNode,getSolution()));

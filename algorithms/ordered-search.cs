@@ -23,10 +23,12 @@ namespace iac.algorithms
 
         public void findSolution()
         {
+            statistics.setStartTime(DateTime.Now.Millisecond);
             generatedStates.Clear();
             statistics._totalExpandedNodes += 1;
             statistics._totalVisitedNodes += 1;
-            statistics.setStartTime(DateTime.Now.Millisecond);
+            statistics.setAlgorithmName("Busca Ordenada");
+
             _currentNode = getInitialState();
             generatedStates.Add(_currentNode);
             openNodes.Enqueue(_currentNode);

@@ -25,6 +25,7 @@ namespace iac.algorithms
         public void findSolution()
         {           
             statistics.setStartTime(DateTime.Now.Millisecond);
+            statistics.setAlgorithmName("Busca em profundidade");
             generatedStates.Clear();
             _currentNode = getInitialState();
             statistics._totalExpandedNodes += 1;

@@ -17,6 +17,7 @@ namespace iac.algorithms
         public void findSolution()
         {               
             statistics.setStartTime(DateTime.Now.Millisecond);
+            statistics.setAlgorithmName("BackTracking");
             generatedStates.Clear();
             statistics._totalExpandedNodes += 1;
             statistics._totalVisitedNodes += 1;

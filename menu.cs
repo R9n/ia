@@ -55,7 +55,7 @@ namespace iac
                 
                 foreach (var statisticse in algorithmRunner.getStatistics())
                 {
-                   statisticse.printStatistcs();
+                   statisticse.writeStatistics();
                 }
                 
             }
