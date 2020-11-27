@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
-using iac.algorithms;
-using iac.helpers;
-using iac.models;
+﻿using iac.helpers;
+
+//  Trabalho de inteligência Artificial 
+//  Professor: Saulo Villela
+//  Aluno: Ronaldo Modesto
+//  Local:Universidade Federal de Juiz de Fora
 
 namespace iac
 {
