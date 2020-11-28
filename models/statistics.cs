@@ -44,9 +44,8 @@ namespace iac.models
           
             try
             {
-                
-               string filePath = @$"./generatedStatistics/{algorithmName}-for-{instanceDimension}-jarros.txt";
-               string directoryPath = "./generatedStatistics/";
+                string directoryPath = "./generatedStatistics/";
+                string filePath = @$"{directoryPath}{algorithmName}-for-{instanceDimension}-jarros.txt";
                 //string filePath = @$"/home/ark/RiderProjects/iac/generatedStatistics/{algorithmName}-for-{instanceDimension}-pitchers.txt";
                 FileInfo fileInfo = new FileInfo(directoryPath);
                 fileInfo.Directory.Create();

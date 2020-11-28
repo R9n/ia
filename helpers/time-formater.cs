@@ -7,20 +7,20 @@ namespace iac.helpers
 
             if (time < 1000)
             {
-                return (time + "Milisegundos");
+                return (time + " Milisegundos");
             }
            if (time >= 1000 && time < 60000)
            {
-               return ((time / 1000) + "segundos");
+               return ((time / 1000) + " Segundos");
            }
            if (time >= 60000 && time < 3600000)
            {
-               return ((time / 60000) + "minutos");
+               return ((time / 60000) + " Minutos");
            }
            
            if (time >= 60000 && time < 86400000)
            {
-               return ((time / 3600000) + "horas");
+               return ((time / 3600000) + " Horas");
            }
            
            return ((time / 86400000) + "dias");
