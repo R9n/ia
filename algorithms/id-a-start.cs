@@ -7,10 +7,10 @@ using iac.models;
 
 namespace iac.algorithms
 {
-    public class IdAStart:Algorithm
+    public class IdAStar:Algorithm
     {
         
-        public IdAStart(Node state, Node solution)
+        public IdAStar(Node state, Node solution)
         {
             setInitialState(state);
             setDesiredSolution(solution);

@@ -44,8 +44,8 @@ namespace iac.models
             try
             {
                 
-               // string filePath = @$"./{algorithmName}-for-{instanceDimension}-jarros.txt";
-                string filePath = @$"/home/ark/RiderProjects/iac/generatedStatistics/{algorithmName}-for-{instanceDimension}-pitchers.txt";
+               string filePath = @$"./{algorithmName}-for-{instanceDimension}-jarros.txt";
+                //string filePath = @$"/home/ark/RiderProjects/iac/generatedStatistics/{algorithmName}-for-{instanceDimension}-pitchers.txt";
                 System.IO.File.WriteAllText(filePath, "");
                 System.IO.StreamWriter file =
                     new System.IO.StreamWriter(filePath);

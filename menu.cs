@@ -1,6 +1,8 @@
 using System;
 using System.Linq;
+using System.Timers;
 using iac.helpers;
+using iac.models;
 
 namespace iac
 {
@@ -8,6 +10,7 @@ namespace iac
     {
         private string option;
         private AlgorithmRunner algorithmRunner;
+        private double time=0.0;
         
         public Menu(DataLoader data)
         {
@@ -31,7 +34,8 @@ namespace iac
             Console.WriteLine("5 para rodar as instâncias através da Busca Gulosa");
             Console.WriteLine("6 para rodar as instâncias através da Busca A* (A-Estrela)");
             Console.WriteLine("7 para rodar as instâncias através da Busca IDA* (IDA-Estrela)");
-            Console.WriteLine("8 Para sair");
+            Console.WriteLine("8 para rodar as todas as instâncias por todos os algoritmos");
+            Console.WriteLine("9 Para sair");
             Console.WriteLine();
             while (option != MenuOptions.exitOption)
             {           
@@ -47,6 +51,31 @@ namespace iac
                 {
                     Console.WriteLine("Saindo...");
                     continue;
+                }
+
+                if (option == MenuOptions.runAllAlgorithmsOption)
+                {
+                    Console.WriteLine("Rodando todos os algoritmos");
+                    Console.WriteLine("Esta operação pode demorar");
+                    time = DateTime.Now.Millisecond;
+                    foreach (var validOptino in MenuOptions.validOptinos)
+                    {
+                        if (validOptino != MenuOptions.runAllAlgorithmsOption && validOptino != MenuOptions.exitOption)
+                        {   
+                            algorithmRunner.getStatistics().Clear();
+                            algorithmRunner.runAlgorithm(validOptino);
+                            foreach (var statisticse in algorithmRunner.getStatistics())
+                            {
+                                statisticse.writeStatistics();
+                            }
+                        }
+                    }
+
+                    time = DateTime.Now.Millisecond - time;
+                    
+                    Console.WriteLine("Todos os algoritmos foram executados.");
+                    Console.WriteLine("Tempo total da execução: "+time+ " Milissegundos" );
+                    
                 }
                 
                 algorithmRunner.runAlgorithm(option);

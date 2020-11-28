@@ -13,9 +13,10 @@ namespace iac.helpers
         public const string greedySearchOption = "5";
         public const string astarOption = "6";
         public const string idAstarOption = "7";
-        public const string exitOption = "8";
+        public const string runAllAlgorithmsOption = "8";
+        public const string exitOption = "9";
 
-        public static string[] validOptinos = {"1","2","3","4","5","6","7","8"};
+        public static string[] validOptinos = {"1","2","3","4","5","6","7","8","9"};
 
 
     }

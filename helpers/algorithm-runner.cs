@@ -16,7 +16,7 @@ namespace iac.helpers
         private OrderedSearch orderedSearch;
         private GreedySearch greedySearch;
         private AStart astar;
-        private IdAStart idAstar;
+        private IdAStar idAstar;
         private List<Statistics> allstaticstics = new List<Statistics>();
         List<int> instancesDimensions = new List<int>();
         private List<Instance> instances;
@@ -45,19 +45,19 @@ namespace iac.helpers
             {
                 case MenuOptions.backTrackingOption:foreach (var instance in instances)
                     {
-                        
+                        Console.WriteLine("Rodando o algoritmo BackTracking... ");
                             Backtracking backtracking = new Backtracking(instance.getInitialState(),instance.getSolution());
                             backtracking.initalizeAlgorithmRules();
                             backtracking.findSolution();
                             Statistics statistics = backtracking.getStatistics();
                             statistics.setInstanceDimension(instance.getDimension());
                             allstaticstics.Add(statistics);
-                        
                     }
                     break;
                  case MenuOptions.depthSearchOption:
                      foreach (var instance in instances)
                      {
+                         Console.WriteLine("Rodando o algoritmo Busca em Profundidade... ");
                          DepthSearch depthSearch = new DepthSearch(instance.getInitialState(),instance.getSolution());
                          depthSearch.initalizeAlgorithmRules();
                          depthSearch.findSolution();
@@ -69,7 +69,8 @@ namespace iac.helpers
                     break;
                 case MenuOptions.widthSearchOption:
                     foreach (var instance in instances)
-                    {
+                    {                        
+                        Console.WriteLine("Rodando o algoritmo Busca em Largura... ");
                         WidthSearch widthSearch = new WidthSearch(instance.getInitialState(),instance.getSolution());
                         widthSearch.initalizeAlgorithmRules();
                         widthSearch.findSolution();
@@ -82,6 +83,7 @@ namespace iac.helpers
                 case MenuOptions.orderedSearchOption:
                     foreach (var instance in instances)
                     {
+                        Console.WriteLine("Rodando o algoritmo Busca Ordenada... ");
                         OrderedSearch orderedSearch = new OrderedSearch(instance.getInitialState(),instance.getSolution());
                         orderedSearch.initalizeAlgorithmRules();
                         orderedSearch.findSolution();
@@ -94,6 +96,7 @@ namespace iac.helpers
                 case MenuOptions.greedySearchOption:
                     foreach (var instance in instances)
                     {
+                        Console.WriteLine("Rodando o algoritmo Busca Gulosa... ");
                         GreedySearch greedySearch= new GreedySearch(instance.getInitialState(),instance.getSolution());
                         greedySearch.initalizeAlgorithmRules();
                         greedySearch.findSolution();
@@ -106,6 +109,8 @@ namespace iac.helpers
         
                     foreach (var instance in instances)
                     {
+                        Console.WriteLine("Rodando o algoritmo A*... ");
+
                         AStart astar = new AStart(instance.getInitialState(),instance.getSolution());
                         astar.initalizeAlgorithmRules();
                         astar.findSolution();
@@ -118,7 +123,8 @@ namespace iac.helpers
                 case MenuOptions.idAstarOption:
                     foreach (var instance in instances)
                     {
-                        IdAStart idAstar = new IdAStart(instance.getInitialState(),instance.getSolution());
+                        Console.WriteLine("Rodando o algoritmo IDA*... ");
+                        IdAStar idAstar = new IdAStar(instance.getInitialState(),instance.getSolution());
                         idAstar.initalizeAlgorithmRules();
                         idAstar.findSolution();
                         Statistics statistics = idAstar.getStatistics();
@@ -126,9 +132,8 @@ namespace iac.helpers
                         allstaticstics.Add(statistics);
                     }
                     break;
-   
+
             }
-            Console.WriteLine("Finalizado.");
         }
 
     }
