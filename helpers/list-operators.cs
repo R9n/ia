@@ -3,6 +3,7 @@ using iac.models;
 
 namespace iac.helpers
 {
+    //Classe auxiliar para operar com listas
     public static class List_operators
     {
         public  static void copyFromToMaintainingState(List<Pitcher> origin, List<Pitcher> destiny)

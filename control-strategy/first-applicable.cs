@@ -10,15 +10,17 @@ namespace iac
         {
             foreach (Operation operation in operations)
             {   
-                if (operation.getHasTried()==false)
+                if (operation.getHasTried()==false) 
                 {
-                    return operation;
+                    return operation; // devolvo a primeira operação que ainda não foi tentada
                 }
             }
 
             return null;
         }
         
+        
+        // essa função é utilizada na busca ordenada, considerando que todas as operações possuem pesos 1
         public Operation getNextOperationWithWeight(List<Operation> operations)
         {
             int weight = Int32.MaxValue;

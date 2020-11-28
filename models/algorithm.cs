@@ -5,6 +5,10 @@ using iac.rules;
 
 namespace iac.models
 {
+    
+    // Classe base dos algoritmos. Esta classe contém métodos que todos os algoritmos teriam de implementar
+    //fazendo a extensão dela nas classes de algoritmos evitamos a repetição de código
+    
     public class Algorithm
     {
         List<Node> _solutionFound = new List<Node>();
@@ -16,6 +20,8 @@ namespace iac.models
         public List<Node> generatedStates= new List<Node>();
         public void initalizeAlgorithmRules()
         {
+            //Método que carrega as regras que estarão disponíveis para os algoritmos/
+            //Pode-se criar mais regras sem problemas
             Drain_out drainOut = new Drain_out();
             Fill fill = new Fill();
             Transfer transfer = new Transfer();
@@ -26,6 +32,7 @@ namespace iac.models
         }
 
         
+        //método que verifica se um dado nó já foi gerado
         public bool hasBeenAlreadyGenerated(Node node
         )
         {
@@ -42,6 +49,7 @@ namespace iac.models
             return hasAlreadyGenerated;
         }
         
+        // Método que gera o conjunto de operações que são possíveis de se aplicar a um determinado nó
         public List<Operation> generateOperationSet(Node node)
         {
             List<Operation> operations = new List<Operation>();
@@ -56,6 +64,7 @@ namespace iac.models
             return operations;
         }
         
+        //método que gera uma regra a partir de um tipo de regra e devolve uma instância do tipo Ryle
         public Rule generateRule(Operation operation)
         {
             switch (operation.getRuleType())
@@ -71,6 +80,72 @@ namespace iac.models
             }
         }
 
+        //gera o caminho solução a partir de um nó passado
+        public  void generateSolutionPath(Node node)
+        {
+            Node aux = new Node();
+            aux = node;
+            List<Node> solution = new List<Node>();
+            while (aux.getIsInitialState() == false)
+            {
+                Node aux2 = new Node();
+                aux2 = aux;
+                solution.Add(aux2);
+                aux = aux.getFather();
+            }
+            setSolution(solution);
+        }
+        
+        //Calcula o fator médio de ramificação
+        public double calculateAverageBranchingFactor()
+        {
+            Node aux ;
+            int treeHeigth = 0;
+            if (_solutionFound.Count > 0)
+            {
+                aux = _solutionFound.First();
+                foreach (Node node in leafs)
+                {
+                    if (node.getId() > aux.getId())
+                    {
+                        aux = node;
+                    }
+                }
+
+                while (aux.getIsInitialState() == false)
+                {
+                    treeHeigth++;
+                    aux = aux.getFather();
+                }
+                return treeHeigth/((generatedStates.Count+ 0.0) - (leafs.Count+0.0));
+
+            }
+
+            return 0;
+
+        }
+        
+        //Verifica se um dado nó é solução
+        public  bool isSolution(Node node,Node solution)
+        {
+            List<Pitcher> solutionPitchers = solution.getPitchers();
+            List<Pitcher> nodePitchers = node.getPitchers();
+            
+            for (int i = 0; i < solutionPitchers.Count; i++)
+            {
+                if (solutionPitchers[i].getMaxVolume() != -1)
+                {
+                    if (solutionPitchers[i].getCurrentVolume() == nodePitchers[i].getCurrentVolume())
+                    {
+                        return true;
+                    }
+                    
+                }
+                
+            }
+            return false;
+        }
+        
         public void setSolution(List<Node> solution)
         {
             _solutionFound = solution;
@@ -81,7 +156,6 @@ namespace iac.models
             return _solutionFound;
         }
 
-        
         public void addRule(Rule rule)
         {
             rules.Add(rule);
@@ -123,67 +197,6 @@ namespace iac.models
             return _InitialState;
         }
 
-        public  void generateSolutionPath(Node node)
-        {
-            Node aux = new Node();
-            aux = node;
-            List<Node> solution = new List<Node>();
-            while (aux.getIsInitialState() == false)
-            {
-                Node aux2 = new Node();
-                aux2 = aux;
-                solution.Add(aux2);
-                aux = aux.getFather();
-            }
-            setSolution(solution);
-        }
-
-       public double calculateAverageBranchingFactor()
-        {
-            Node aux ;
-            int treeHeigth = 0;
-            if (_solutionFound.Count > 0)
-            {
-                aux = _solutionFound.First();
-                foreach (Node node in leafs)
-                {
-                    if (node.getId() > aux.getId())
-                    {
-                        aux = node;
-                    }
-                }
-
-                while (aux.getIsInitialState() == false)
-                {
-                    treeHeigth++;
-                    aux = aux.getFather();
-                }
-                return treeHeigth/((generatedStates.Count+ 0.0) - (leafs.Count+0.0));
-
-            }
-
-            return 0;
-
-        }
         
-        public  bool isSolution(Node node,Node solution)
-        {
-            List<Pitcher> solutionPitchers = solution.getPitchers();
-            List<Pitcher> nodePitchers = node.getPitchers();
-            
-            for (int i = 0; i < solutionPitchers.Count; i++)
-            {
-                if (solutionPitchers[i].getMaxVolume() != -1)
-                {
-                    if (solutionPitchers[i].getCurrentVolume() == nodePitchers[i].getCurrentVolume())
-                    {
-                        return true;
-                    }
-                    
-                }
-                
-            }
-            return false;
-        }
     }
 }

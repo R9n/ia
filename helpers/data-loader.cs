@@ -4,6 +4,9 @@ using iac.models;
 
 namespace iac.helpers
 {
+    // Esta classe é responsável por carregar as instências
+    //Dado que estou aceitando instÂncias de tamanho variado algumas verificações são feitas
+    // como por exemplo não é permitido um estado incial com 2 jarros e uma solução com 5 jarros;
     public class DataLoader
     {
         private List<Instance> instances = new List<Instance>();
@@ -22,7 +25,8 @@ namespace iac.helpers
 
         private Pitcher generatePitcher(string dataString)
         {
-            int maxVolumeIndex = 0;
+                // cada linha de informação sobre os jarros possui essas informações: volume máximo, volume atual e nome
+                int maxVolumeIndex = 0; 
                 int currentVolumeIndex = 1;
                 int nameIndex = 2;
             
@@ -49,6 +53,7 @@ namespace iac.helpers
             string line;
             int solutionDimension = 0;
             int inictalStateDimention = 0;
+            
             if (dataPath.Equals(""))
             {
                 throw new Exception("O caminho do arquivo de instências não pode ser vazio");
@@ -65,10 +70,10 @@ namespace iac.helpers
             while(line != null)
             {
                lines++;
-                if (!line.StartsWith(InstanceMarkers.commentMarker))
+                if (!line.StartsWith(InstanceMarkers.commentMarker)) // ignoro linhas que começem com comentário 
                 {             
-                    if (line == InstanceMarkers.instanceStartMarker)
-                    {    
+                    if (line == InstanceMarkers.instanceStartMarker) // instancio uma nova instancia de Instância sempre que acho um marcador
+                    {                                               // de início de instência  
                          Node solution = new Node();
                          Node initialState = new Node();
                          List<Pitcher> solutionPitchers = new List<Pitcher>();
@@ -85,7 +90,7 @@ namespace iac.helpers
                              line = file.ReadLine();
                          }
                          
-                         line = file.ReadLine();
+                         line = file.ReadLine(); // avanço para a próxima linha para ler a seçaõ do jos jarros do estado incial
                          
                          while (line != InstanceMarkers.instanceStartMarker && line != InstanceMarkers.instanceFileEndMarker)
                          {
@@ -95,8 +100,8 @@ namespace iac.helpers
                             
                          }
 
-                         if (solutionDimension != inictalStateDimention)
-                         {
+                         if (solutionDimension != inictalStateDimention) // conforme dito não é permitido instancias e estados inicias 
+                         {                                              // com dimensões diferentes 
                              throw  new Exception("Instância inválida! A solução desejada e o estado incial devem possuir a mesma" +
                                                   "dimensão");
                          }

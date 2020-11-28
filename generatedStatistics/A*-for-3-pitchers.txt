@@ -1,0 +1,14 @@
+!===============================================
+Algoritmo : A*
+Dimensão da instência: 3 jarros
+Total de nós expandidos: 32
+Total de nós visitados: 14
+Fator médio de ramificação 0,09375
+Custo da solução: 6
+Tempo total de execução: 4 Milissegundos
+Profundidade da solução: 3
+Caminho da solução:
+Encher o jarro: "C"
+Transferir 3 do jarro "C" para o para o jarro "B"
+Transferir 2 do jarro "C" para o para o jarro "A"
+===============================================

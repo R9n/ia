@@ -1,0 +1,23 @@
+!===============================================
+Algoritmo : Busca Gulosa
+Dimensão da instência: 3 jarros
+Total de nós expandidos: 22
+Total de nós visitados: 22
+Fator médio de ramificação 0,19672131147540983
+Custo da solução: 97
+Tempo total de execução: 81 Milissegundos
+Profundidade da solução: 12
+Caminho da solução:
+Encher o jarro: "A"
+Transferir 3 do jarro "A" para o para o jarro "B"
+Transferir 3 do jarro "B" para o para o jarro "C"
+Encher o jarro: "C"
+Transferir 3 do jarro "C" para o para o jarro "B"
+Transferir 2 do jarro "C" para o para o jarro "A"
+Encher o jarro: "C"
+Esvaziar o jarro: "B"
+Transferir 3 do jarro "C" para o para o jarro "B"
+Esvaziar o jarro: "B"
+Transferir 2 do jarro "C" para o para o jarro "B"
+Transferir 1 do jarro "A" para o para o jarro "B"
+===============================================

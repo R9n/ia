@@ -1,0 +1,28 @@
+!===============================================
+Algoritmo : Busca em profundidade
+Dimensão da instência: 3 jarros
+Total de nós expandidos: 20
+Total de nós visitados: 20
+Fator médio de ramificação 0,3469387755102041
+Custo da solução: 17
+Tempo total de execução: 2 Milissegundos
+Profundidade da solução: 17
+Caminho da solução:
+Encher o jarro: "C"
+Encher o jarro: "B"
+Encher o jarro: "A"
+Esvaziar o jarro: "C"
+Transferir 3 do jarro "B" para o para o jarro "C"
+Encher o jarro: "B"
+Esvaziar o jarro: "A"
+Transferir 2 do jarro "B" para o para o jarro "C"
+Esvaziar o jarro: "C"
+Encher o jarro: "A"
+Transferir 4 do jarro "A" para o para o jarro "C"
+Encher o jarro: "A"
+Encher o jarro: "B"
+Transferir 1 do jarro "B" para o para o jarro "C"
+Esvaziar o jarro: "C"
+Esvaziar o jarro: "A"
+Transferir 2 do jarro "B" para o para o jarro "A"
+===============================================

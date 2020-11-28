@@ -1,7 +1,5 @@
 using System;
 using System.Linq;
-using System.Timers;
-using iac.algorithms;
 using iac.helpers;
 
 namespace iac

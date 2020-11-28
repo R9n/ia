@@ -2,6 +2,8 @@ using System.Collections.Generic;
 
 namespace iac.models
 {
+    //Classe base que modela uma regra
+    //É extendida em todas as outras regras criadas para evitar repetição de código
     public abstract class Rule
     {
         private ruleTypes.RulesTypes _ruleTypes;

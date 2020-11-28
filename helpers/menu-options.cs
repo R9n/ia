@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace iac.helpers
 {
+    //Classe com as opções disponíveis no menu
     public static class MenuOptions
     {
         public const string backTrackingOption = "1";

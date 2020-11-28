@@ -82,6 +82,7 @@ namespace iac.models
 
         
 
+        //Método que verifica se um dado nó é igual a este próprio nó
         public bool isEqualTo(Node node)
         {
             bool isEqual = true;
@@ -100,7 +101,7 @@ namespace iac.models
         }
         
         
-        
+        //método utilizado para printar e debucar as informações de um nó
         public void printState()
         {       
             Console.WriteLine("-------------------------------------------------");
@@ -149,6 +150,7 @@ namespace iac.models
             return null;
         }
 
+        //substitui um jarro por outro a partir de um id específico passado
         public void replacePitcherById(int pitcherId, Pitcher newPitcher)
         {
             for (int i = 0; i < _pitchers.Count; i++)

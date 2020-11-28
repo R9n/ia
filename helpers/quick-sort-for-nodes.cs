@@ -4,6 +4,7 @@ using iac.models;
 
 namespace iac.helpers
 {
+    //Quicksort adaptado para ordenar uma lista de nós.
     public class QuickSort
     {
         public void sort(List<Node>nodes, int left, int right)

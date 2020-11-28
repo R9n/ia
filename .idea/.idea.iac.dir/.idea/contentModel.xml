@@ -20,7 +20,15 @@
       <e p="control-strategy" t="Include">
         <e p="first-applicable.cs" t="Include" />
       </e>
-      <e p="generatedStatistics" t="Include" />
+      <e p="generatedStatistics" t="Include">
+        <e p="A*-for-3-pitchers.txt" t="Include" />
+        <e p="BackTracking-for-3-pitchers.txt" t="Include" />
+        <e p="Busca Gulosa-for-3-pitchers.txt" t="Include" />
+        <e p="Busca Ordenada-for-3-pitchers.txt" t="Include" />
+        <e p="Busca em largura-for-3-pitchers.txt" t="Include" />
+        <e p="Busca em profundidade-for-3-pitchers.txt" t="Include" />
+        <e p="IDA*-for-3-pitchers.txt" t="Include" />
+      </e>
       <e p="global-variables.cs" t="Include" />
       <e p="helpers" t="Include">
         <e p="algorithm-runner.cs" t="Include" />

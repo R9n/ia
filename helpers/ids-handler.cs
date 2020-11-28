@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace iac.helpers
 {
+    // Classe que cria automaticamente os ids utilizados nos jarros
     public class Ids_handler
     {
         private List<int> _generatedIds = new List<int>();

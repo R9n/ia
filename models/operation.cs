@@ -1,5 +1,8 @@
 namespace iac.models
 {
+    // Esta classe representa a operação que pode ser feita em um determinado nó
+    // origem e destinos são os ids dos jarros de origem e destino
+    
     public class Operation
     {
         private ruleTypes.RulesTypes _ruleType;

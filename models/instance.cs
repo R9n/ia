@@ -1,5 +1,7 @@
 namespace iac.models
 {
+    //Classe que modela uma instância
+    //dimension é a dimensão da instância ( 1,2,3,...N ) jarros
     public class Instance
     {
         private Node solution;
@@ -11,8 +13,6 @@ namespace iac.models
             setInitialState(initialState);
             setSolution(solution);
             setDimension(dimension);
-            
-            
         }
         
         public void setDimension(int value)

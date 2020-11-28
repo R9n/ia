@@ -14,9 +14,11 @@ namespace iac.algorithms
             setInitialState(state);
             setDesiredSolution(solution);
         }
+        //declaração das variáveis utilizadas nos algoritmos
+        
         private Node _currentNode =  new Node();
-        private  List<Node> openNodes = new List<Node>();
-        private  List<Node> closedNodes = new List<Node>();
+        private List<Node> openNodes = new List<Node>();
+        private List<Node> closedNodes = new List<Node>();
         private ClosestToSolutionHeuristic heuristics = new ClosestToSolutionHeuristic();
         private Rule ruleToApply;
         private QuickSort quickSort = new QuickSort();
@@ -27,6 +29,7 @@ namespace iac.algorithms
         
         public void findSolution()
         {
+            //inicio a contagem do tempo
             statistics.setStartTime(DateTime.Now.Millisecond);
             generatedStates.Clear();
             statistics.setAlgorithmName("A*");
@@ -53,8 +56,8 @@ namespace iac.algorithms
                    
                      if (isSolution(_currentNode, getDesiredSolution()))
                      {
-                         generateSolutionPath(_currentNode);
-                         statistics.setSolution(getSolutionFound());
+                         generateSolutionPath(_currentNode); //pego o caminho da solução 
+                         statistics.setSolution(getSolutionFound()); 
                          statistics.setAverageBranchingFactor(calculateAverageBranchingFactor());
                          statistics.setSolutionCost(_currentNode.getHeuristicValor());
                          statistics.setEndTime(DateTime.Now.Millisecond);
@@ -65,7 +68,7 @@ namespace iac.algorithms
                         statistics._totalVisitedNodes += 1;
                         foreach (var possibleOperation in _currentNode.getPossibleOperations())
                         {
-                            
+                            //obtenho a próxima operação a ser realizada segundo a estratégia de controle
                             operation = firstApplicable.getNextOperation(_currentNode.getPossibleOperations());
                             if (operation != null)
                             {   operation.setHasTried(true); 
