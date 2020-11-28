@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using iac.helpers;
 
 namespace iac.models
 {
@@ -25,7 +26,7 @@ namespace iac.models
             Console.WriteLine("Total de nós expandidos: "+_totalExpandedNodes);
             Console.WriteLine("Total de nós visitados: "+_totalVisitedNodes);
             Console.WriteLine("Fator médio de ramificação "+_averageBranchingFactor);
-            Console.WriteLine("Tempo total de execução: "+getExecutionTime()+" Milissegundos");
+            Console.WriteLine("Tempo total de execução: "+TimeFormatter.format(getExecutionTime()));
             Console.WriteLine("Custo da solução: "+solutionCost);
             Console.WriteLine("Profundidade da solução: "+getSolutionDeep());
             Console.WriteLine("Caminho da solução:");
@@ -44,8 +45,12 @@ namespace iac.models
             try
             {
                 
-               string filePath = @$"./{algorithmName}-for-{instanceDimension}-jarros.txt";
+               string filePath = @$"./generatedStatistics/{algorithmName}-for-{instanceDimension}-jarros.txt";
+               string directoryPath = "./generatedStatistics/";
                 //string filePath = @$"/home/ark/RiderProjects/iac/generatedStatistics/{algorithmName}-for-{instanceDimension}-pitchers.txt";
+                FileInfo fileInfo = new FileInfo(directoryPath);
+                fileInfo.Directory.Create();
+                
                 System.IO.File.WriteAllText(filePath, "");
                 System.IO.StreamWriter file =
                     new System.IO.StreamWriter(filePath);
@@ -59,7 +64,7 @@ namespace iac.models
                 file.WriteLine("Total de nós visitados: "+_totalVisitedNodes);
                 file.WriteLine("Fator médio de ramificação "+_averageBranchingFactor);
                 file.WriteLine("Custo da solução: "+solutionCost);
-                file.WriteLine("Tempo total de execução: "+getExecutionTime()+" Milissegundos");
+                file.WriteLine("Tempo total de execução: "+ TimeFormatter.format(getExecutionTime()));
                 file.WriteLine("Profundidade da solução: "+getSolutionDeep());
                 file.WriteLine("Caminho da solução:");
 

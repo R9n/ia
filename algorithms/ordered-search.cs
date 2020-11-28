@@ -53,7 +53,7 @@ namespace iac.algorithms
             generatedStates.Clear();
             statistics._totalExpandedNodes += 1;
             statistics._totalVisitedNodes += 1;
-            statistics.setAlgorithmName("Busca Ordenada");
+            statistics.setAlgorithmName("busca-ordenada");
 
             _currentNode = getInitialState();
             generatedStates.Add(_currentNode);

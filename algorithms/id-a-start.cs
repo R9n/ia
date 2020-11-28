@@ -33,7 +33,7 @@ namespace iac.algorithms
             generatedStates.Clear();
             statistics._totalExpandedNodes += 1;
             statistics._totalVisitedNodes += 1;
-            statistics.setAlgorithmName("IDA*");
+            statistics.setAlgorithmName("ida-star");
 
             _currentNode = getInitialState();
             generatedStates.Add(_currentNode);

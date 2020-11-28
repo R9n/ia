@@ -63,7 +63,7 @@ namespace iac.helpers
                 System.IO.StreamReader file =
                     new System.IO.StreamReader(dataPath);
                 
-                Console.WriteLine("Carregando Dados...");   
+                Console.WriteLine("Carregando Dados da instancia...");   
 
                 line = file.ReadLine(); 
                 
@@ -117,11 +117,6 @@ namespace iac.helpers
                          
                          if (line == InstanceMarkers.instanceFileEndMarker)
                          {
-                             foreach (var instance in instances)
-                             {
-                              Console.WriteLine(instance.getInitialState() == null);   
-                             }
-
                              break;
                          }
                     }

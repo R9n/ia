@@ -75,6 +75,7 @@ namespace iac
                     
                     Console.WriteLine("Todos os algoritmos foram executados.");
                     Console.WriteLine("Tempo total da execução: "+time+ " Milissegundos" );
+                    continue;
                     
                 }
                 

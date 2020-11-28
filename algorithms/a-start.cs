@@ -32,7 +32,7 @@ namespace iac.algorithms
             //inicio a contagem do tempo
             statistics.setStartTime(DateTime.Now.Millisecond);
             generatedStates.Clear();
-            statistics.setAlgorithmName("A*");
+            statistics.setAlgorithmName("a-star");
             statistics._totalExpandedNodes += 1;
             statistics._totalVisitedNodes += 1;
             _currentNode = getInitialState();

@@ -76,7 +76,6 @@ namespace iac.algorithms
                                 operation.setHasTried(true);
                                 ruleToApply = generateRule(operation);
                                 Node aux = ruleToApply.applyRule(_currentNode,operation);
-                                aux.printState();
                                 if (hasBeenAlreadyGenerated(aux)==false)
                                 {
                                     generatedStates.Add(aux);

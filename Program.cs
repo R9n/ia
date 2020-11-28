@@ -11,7 +11,7 @@ namespace iac
     {
         static void Main(string[] args)
         {
-            DataLoader dataLoader = new DataLoader("/home/ark/RiderProjects/iac/instancia.txt");
+            DataLoader dataLoader = new DataLoader("./instancia.txt");
             Menu menu= new Menu(dataLoader);
             menu.showMenu();
         }
